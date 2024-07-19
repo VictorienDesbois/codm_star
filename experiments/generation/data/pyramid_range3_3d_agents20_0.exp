@@ -1,0 +1,4 @@
+phys_graph pyramid.png_phys_uniform_grid_1_range_3_3d.graphml
+comm_graph pyramid.png_comm_uniform_grid_1_range_3_3d.graphml
+start 946 929 706 590 292 735 532 352 477 685 533 476 79 753 168 572 734 322 528 92 
+goal 965 949 592 933 917 371 759 951 539 179 155 577 796 541 509 724 507 508 578 981 

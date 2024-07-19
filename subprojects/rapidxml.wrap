@@ -1,0 +1,6 @@
+[wrap-file]
+directory = rapidxml
+
+[provide]
+dependency_names = rapidxml
+rapidxml = rapidxml_dep

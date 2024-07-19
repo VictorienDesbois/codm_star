@@ -1,0 +1,4 @@
+phys_graph rooms.png_phys_uniform_grid_1_range_4.graphml
+comm_graph rooms.png_comm_uniform_grid_1_range_4.graphml
+start 242 311 176 216 218 222 226 285 319 193 262 91 127 215 274 
+goal 87 36 75 3 122 73 39 7 9 158 126 163 171 130 208 

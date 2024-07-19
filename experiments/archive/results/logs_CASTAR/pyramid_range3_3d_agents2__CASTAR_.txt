@@ -1,0 +1,680 @@
+
+    
+>>>>> ../generation/data/pyramid_range3_3d_agents2_0.exp
+time ./castar -a CASTAR -e ../generation/data/pyramid_range3_3d_agents2_0.exp -G ../generation/graphs/ --collisions CHECK_COLLISIONS --nbst 100 --verbose false --subsolver CASTAR
+INFO: Experience: ../generation/data/pyramid_range3_3d_agents2_0.exp
+INFO: Graph Folder: ../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 992
+TRACE: Number of edges: 5272
+TRACE: Number of agents: 2
+INFO: Start configuration: <912, 914>
+INFO: Goal configuration: <650, 444>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1712596767
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 39
+INFO: Execution cost:78
+INFO: Execution found
+0.27user 0.00system 0:00.27elapsed 99%CPU (0avgtext+0avgdata 17372maxresident)k
+0inputs+1008outputs (0major+3722minor)pagefaults 0swaps
+
+    
+>>>>> ../generation/data/pyramid_range3_3d_agents2_10.exp
+time ./castar -a CASTAR -e ../generation/data/pyramid_range3_3d_agents2_10.exp -G ../generation/graphs/ --collisions CHECK_COLLISIONS --nbst 100 --verbose false --subsolver CASTAR
+INFO: Experience: ../generation/data/pyramid_range3_3d_agents2_10.exp
+INFO: Graph Folder: ../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 992
+TRACE: Number of edges: 5272
+TRACE: Number of agents: 2
+INFO: Start configuration: <424, 845>
+INFO: Goal configuration: <232, 46>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1712596767
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 8
+INFO: Execution cost:16
+INFO: Execution found
+0.15user 0.00system 0:00.16elapsed 100%CPU (0avgtext+0avgdata 17372maxresident)k
+0inputs+1008outputs (0major+3722minor)pagefaults 0swaps
+
+    
+>>>>> ../generation/data/pyramid_range3_3d_agents2_11.exp
+time ./castar -a CASTAR -e ../generation/data/pyramid_range3_3d_agents2_11.exp -G ../generation/graphs/ --collisions CHECK_COLLISIONS --nbst 100 --verbose false --subsolver CASTAR
+INFO: Experience: ../generation/data/pyramid_range3_3d_agents2_11.exp
+INFO: Graph Folder: ../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 992
+TRACE: Number of edges: 5272
+TRACE: Number of agents: 2
+INFO: Start configuration: <42, 244>
+INFO: Goal configuration: <537, 326>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1712596767
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 28
+INFO: Execution cost:56
+INFO: Execution found
+0.16user 0.01system 0:00.17elapsed 99%CPU (0avgtext+0avgdata 17372maxresident)k
+0inputs+1008outputs (0major+3729minor)pagefaults 0swaps
+
+    
+>>>>> ../generation/data/pyramid_range3_3d_agents2_12.exp
+time ./castar -a CASTAR -e ../generation/data/pyramid_range3_3d_agents2_12.exp -G ../generation/graphs/ --collisions CHECK_COLLISIONS --nbst 100 --verbose false --subsolver CASTAR
+INFO: Experience: ../generation/data/pyramid_range3_3d_agents2_12.exp
+INFO: Graph Folder: ../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 992
+TRACE: Number of edges: 5272
+TRACE: Number of agents: 2
+INFO: Start configuration: <788, 367>
+INFO: Goal configuration: <517, 152>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1712596767
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 10
+INFO: Execution cost:20
+INFO: Execution found
+0.15user 0.01system 0:00.16elapsed 99%CPU (0avgtext+0avgdata 17376maxresident)k
+0inputs+1016outputs (0major+3724minor)pagefaults 0swaps
+
+    
+>>>>> ../generation/data/pyramid_range3_3d_agents2_13.exp
+time ./castar -a CASTAR -e ../generation/data/pyramid_range3_3d_agents2_13.exp -G ../generation/graphs/ --collisions CHECK_COLLISIONS --nbst 100 --verbose false --subsolver CASTAR
+INFO: Experience: ../generation/data/pyramid_range3_3d_agents2_13.exp
+INFO: Graph Folder: ../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 992
+TRACE: Number of edges: 5272
+TRACE: Number of agents: 2
+INFO: Start configuration: <529, 131>
+INFO: Goal configuration: <71, 72>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1712596767
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 31
+INFO: Execution cost:62
+INFO: Execution found
+0.16user 0.00system 0:00.17elapsed 99%CPU (0avgtext+0avgdata 17372maxresident)k
+0inputs+1008outputs (0major+3730minor)pagefaults 0swaps
+
+    
+>>>>> ../generation/data/pyramid_range3_3d_agents2_14.exp
+time ./castar -a CASTAR -e ../generation/data/pyramid_range3_3d_agents2_14.exp -G ../generation/graphs/ --collisions CHECK_COLLISIONS --nbst 100 --verbose false --subsolver CASTAR
+INFO: Experience: ../generation/data/pyramid_range3_3d_agents2_14.exp
+INFO: Graph Folder: ../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 992
+TRACE: Number of edges: 5272
+TRACE: Number of agents: 2
+INFO: Start configuration: <928, 530>
+INFO: Goal configuration: <289, 476>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1712596767
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 11
+INFO: Execution cost:22
+INFO: Execution found
+0.16user 0.00system 0:00.16elapsed 100%CPU (0avgtext+0avgdata 17372maxresident)k
+0inputs+1008outputs (0major+3723minor)pagefaults 0swaps
+
+    
+>>>>> ../generation/data/pyramid_range3_3d_agents2_15.exp
+time ./castar -a CASTAR -e ../generation/data/pyramid_range3_3d_agents2_15.exp -G ../generation/graphs/ --collisions CHECK_COLLISIONS --nbst 100 --verbose false --subsolver CASTAR
+INFO: Experience: ../generation/data/pyramid_range3_3d_agents2_15.exp
+INFO: Graph Folder: ../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 992
+TRACE: Number of edges: 5272
+TRACE: Number of agents: 2
+INFO: Start configuration: <552, 777>
+INFO: Goal configuration: <743, 740>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1712596768
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 24
+INFO: Execution cost:48
+INFO: Execution found
+0.15user 0.00system 0:00.15elapsed 100%CPU (0avgtext+0avgdata 17372maxresident)k
+0inputs+1016outputs (0major+3723minor)pagefaults 0swaps
+
+    
+>>>>> ../generation/data/pyramid_range3_3d_agents2_16.exp
+time ./castar -a CASTAR -e ../generation/data/pyramid_range3_3d_agents2_16.exp -G ../generation/graphs/ --collisions CHECK_COLLISIONS --nbst 100 --verbose false --subsolver CASTAR
+INFO: Experience: ../generation/data/pyramid_range3_3d_agents2_16.exp
+INFO: Graph Folder: ../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 992
+TRACE: Number of edges: 5272
+TRACE: Number of agents: 2
+INFO: Start configuration: <136, 535>
+INFO: Goal configuration: <685, 478>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1712596768
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 18
+INFO: Execution cost:36
+INFO: Execution found
+0.14user 0.01system 0:00.15elapsed 99%CPU (0avgtext+0avgdata 17372maxresident)k
+0inputs+1008outputs (0major+3724minor)pagefaults 0swaps
+
+    
+>>>>> ../generation/data/pyramid_range3_3d_agents2_17.exp
+time ./castar -a CASTAR -e ../generation/data/pyramid_range3_3d_agents2_17.exp -G ../generation/graphs/ --collisions CHECK_COLLISIONS --nbst 100 --verbose false --subsolver CASTAR
+INFO: Experience: ../generation/data/pyramid_range3_3d_agents2_17.exp
+INFO: Graph Folder: ../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 992
+TRACE: Number of edges: 5272
+TRACE: Number of agents: 2
+INFO: Start configuration: <375, 326>
+INFO: Goal configuration: <101, 301>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1712596768
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 22
+INFO: Execution cost:44
+INFO: Execution found
+0.15user 0.00system 0:00.15elapsed 99%CPU (0avgtext+0avgdata 17372maxresident)k
+0inputs+1008outputs (0major+3724minor)pagefaults 0swaps
+
+    
+>>>>> ../generation/data/pyramid_range3_3d_agents2_18.exp
+time ./castar -a CASTAR -e ../generation/data/pyramid_range3_3d_agents2_18.exp -G ../generation/graphs/ --collisions CHECK_COLLISIONS --nbst 100 --verbose false --subsolver CASTAR
+INFO: Experience: ../generation/data/pyramid_range3_3d_agents2_18.exp
+INFO: Graph Folder: ../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 992
+TRACE: Number of edges: 5272
+TRACE: Number of agents: 2
+INFO: Start configuration: <307, 340>
+INFO: Goal configuration: <811, 829>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1712596768
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 27
+INFO: Execution cost:54
+INFO: Execution found
+0.13user 0.01system 0:00.15elapsed 99%CPU (0avgtext+0avgdata 17372maxresident)k
+0inputs+1008outputs (0major+3725minor)pagefaults 0swaps
+
+    
+>>>>> ../generation/data/pyramid_range3_3d_agents2_19.exp
+time ./castar -a CASTAR -e ../generation/data/pyramid_range3_3d_agents2_19.exp -G ../generation/graphs/ --collisions CHECK_COLLISIONS --nbst 100 --verbose false --subsolver CASTAR
+INFO: Experience: ../generation/data/pyramid_range3_3d_agents2_19.exp
+INFO: Graph Folder: ../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 992
+TRACE: Number of edges: 5272
+TRACE: Number of agents: 2
+INFO: Start configuration: <62, 259>
+INFO: Goal configuration: <839, 808>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1712596768
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 16
+INFO: Execution cost:32
+INFO: Execution found
+0.13user 0.00system 0:00.14elapsed 99%CPU (0avgtext+0avgdata 17372maxresident)k
+0inputs+1008outputs (0major+3723minor)pagefaults 0swaps
+
+    
+>>>>> ../generation/data/pyramid_range3_3d_agents2_1.exp
+time ./castar -a CASTAR -e ../generation/data/pyramid_range3_3d_agents2_1.exp -G ../generation/graphs/ --collisions CHECK_COLLISIONS --nbst 100 --verbose false --subsolver CASTAR
+INFO: Experience: ../generation/data/pyramid_range3_3d_agents2_1.exp
+INFO: Graph Folder: ../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 992
+TRACE: Number of edges: 5272
+TRACE: Number of agents: 2
+INFO: Start configuration: <250, 214>
+INFO: Goal configuration: <52, 38>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1712596768
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 21
+INFO: Execution cost:42
+INFO: Execution found
+0.14user 0.00system 0:00.14elapsed 98%CPU (0avgtext+0avgdata 17372maxresident)k
+0inputs+1008outputs (0major+3722minor)pagefaults 0swaps
+
+    
+>>>>> ../generation/data/pyramid_range3_3d_agents2_2.exp
+time ./castar -a CASTAR -e ../generation/data/pyramid_range3_3d_agents2_2.exp -G ../generation/graphs/ --collisions CHECK_COLLISIONS --nbst 100 --verbose false --subsolver CASTAR
+INFO: Experience: ../generation/data/pyramid_range3_3d_agents2_2.exp
+INFO: Graph Folder: ../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 992
+TRACE: Number of edges: 5272
+TRACE: Number of agents: 2
+INFO: Start configuration: <591, 593>
+INFO: Goal configuration: <140, 519>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1712596769
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 18
+INFO: Execution cost:36
+INFO: Execution found
+0.12user 0.01system 0:00.14elapsed 99%CPU (0avgtext+0avgdata 17372maxresident)k
+0inputs+1008outputs (0major+3721minor)pagefaults 0swaps
+
+    
+>>>>> ../generation/data/pyramid_range3_3d_agents2_3.exp
+time ./castar -a CASTAR -e ../generation/data/pyramid_range3_3d_agents2_3.exp -G ../generation/graphs/ --collisions CHECK_COLLISIONS --nbst 100 --verbose false --subsolver CASTAR
+INFO: Experience: ../generation/data/pyramid_range3_3d_agents2_3.exp
+INFO: Graph Folder: ../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 992
+TRACE: Number of edges: 5272
+TRACE: Number of agents: 2
+INFO: Start configuration: <391, 598>
+INFO: Goal configuration: <371, 793>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1712596769
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 14
+INFO: Execution cost:28
+INFO: Execution found
+0.12user 0.01system 0:00.14elapsed 99%CPU (0avgtext+0avgdata 17280maxresident)k
+0inputs+1016outputs (0major+3723minor)pagefaults 0swaps
+
+    
+>>>>> ../generation/data/pyramid_range3_3d_agents2_4.exp
+time ./castar -a CASTAR -e ../generation/data/pyramid_range3_3d_agents2_4.exp -G ../generation/graphs/ --collisions CHECK_COLLISIONS --nbst 100 --verbose false --subsolver CASTAR
+INFO: Experience: ../generation/data/pyramid_range3_3d_agents2_4.exp
+INFO: Graph Folder: ../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 992
+TRACE: Number of edges: 5272
+TRACE: Number of agents: 2
+INFO: Start configuration: <367, 170>
+INFO: Goal configuration: <108, 110>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1712596769
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 17
+INFO: Execution cost:34
+INFO: Execution found
+0.13user 0.01system 0:00.14elapsed 99%CPU (0avgtext+0avgdata 17372maxresident)k
+0inputs+1008outputs (0major+3723minor)pagefaults 0swaps
+
+    
+>>>>> ../generation/data/pyramid_range3_3d_agents2_5.exp
+time ./castar -a CASTAR -e ../generation/data/pyramid_range3_3d_agents2_5.exp -G ../generation/graphs/ --collisions CHECK_COLLISIONS --nbst 100 --verbose false --subsolver CASTAR
+INFO: Experience: ../generation/data/pyramid_range3_3d_agents2_5.exp
+INFO: Graph Folder: ../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 992
+TRACE: Number of edges: 5272
+TRACE: Number of agents: 2
+INFO: Start configuration: <292, 305>
+INFO: Goal configuration: <270, 69>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1712596769
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 9
+INFO: Execution cost:18
+INFO: Execution found
+0.13user 0.00system 0:00.13elapsed 99%CPU (0avgtext+0avgdata 17372maxresident)k
+0inputs+1008outputs (0major+3722minor)pagefaults 0swaps
+
+    
+>>>>> ../generation/data/pyramid_range3_3d_agents2_6.exp
+time ./castar -a CASTAR -e ../generation/data/pyramid_range3_3d_agents2_6.exp -G ../generation/graphs/ --collisions CHECK_COLLISIONS --nbst 100 --verbose false --subsolver CASTAR
+INFO: Experience: ../generation/data/pyramid_range3_3d_agents2_6.exp
+INFO: Graph Folder: ../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 992
+TRACE: Number of edges: 5272
+TRACE: Number of agents: 2
+INFO: Start configuration: <167, 349>
+INFO: Goal configuration: <156, 355>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1712596769
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 13
+INFO: Execution cost:26
+INFO: Execution found
+0.13user 0.00system 0:00.13elapsed 98%CPU (0avgtext+0avgdata 17120maxresident)k
+0inputs+1016outputs (0major+3723minor)pagefaults 0swaps
+
+    
+>>>>> ../generation/data/pyramid_range3_3d_agents2_7.exp
+time ./castar -a CASTAR -e ../generation/data/pyramid_range3_3d_agents2_7.exp -G ../generation/graphs/ --collisions CHECK_COLLISIONS --nbst 100 --verbose false --subsolver CASTAR
+INFO: Experience: ../generation/data/pyramid_range3_3d_agents2_7.exp
+INFO: Graph Folder: ../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 992
+TRACE: Number of edges: 5272
+TRACE: Number of agents: 2
+INFO: Start configuration: <802, 432>
+INFO: Goal configuration: <493, 726>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1712596769
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 33
+INFO: Execution cost:66
+INFO: Execution found
+0.17user 0.00system 0:00.18elapsed 99%CPU (0avgtext+0avgdata 17376maxresident)k
+0inputs+1008outputs (0major+3732minor)pagefaults 0swaps
+
+    
+>>>>> ../generation/data/pyramid_range3_3d_agents2_8.exp
+time ./castar -a CASTAR -e ../generation/data/pyramid_range3_3d_agents2_8.exp -G ../generation/graphs/ --collisions CHECK_COLLISIONS --nbst 100 --verbose false --subsolver CASTAR
+INFO: Experience: ../generation/data/pyramid_range3_3d_agents2_8.exp
+INFO: Graph Folder: ../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 992
+TRACE: Number of edges: 5272
+TRACE: Number of agents: 2
+INFO: Start configuration: <455, 67>
+INFO: Goal configuration: <422, 44>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1712596769
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 16
+INFO: Execution cost:32
+INFO: Execution found
+0.13user 0.00system 0:00.13elapsed 99%CPU (0avgtext+0avgdata 17372maxresident)k
+0inputs+1008outputs (0major+3722minor)pagefaults 0swaps
+
+    
+>>>>> ../generation/data/pyramid_range3_3d_agents2_9.exp
+time ./castar -a CASTAR -e ../generation/data/pyramid_range3_3d_agents2_9.exp -G ../generation/graphs/ --collisions CHECK_COLLISIONS --nbst 100 --verbose false --subsolver CASTAR
+INFO: Experience: ../generation/data/pyramid_range3_3d_agents2_9.exp
+INFO: Graph Folder: ../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 992
+TRACE: Number of edges: 5272
+TRACE: Number of agents: 2
+INFO: Start configuration: <671, 858>
+INFO: Goal configuration: <748, 362>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1712596770
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 32
+INFO: Execution cost:64
+INFO: Execution found
+0.13user 0.01system 0:00.15elapsed 99%CPU (0avgtext+0avgdata 17372maxresident)k
+0inputs+1008outputs (0major+3729minor)pagefaults 0swaps

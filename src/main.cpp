@@ -1,0 +1,262 @@
+#include <iostream>
+#include <time.h>
+#include <boost/graph/adjacency_list.hpp>
+#include <boost/program_options.hpp>
+#include <array>
+#include <utility>
+#include <iostream>
+
+#include "instance_loader.hpp"
+#include "codm_star.hpp"
+
+using namespace boost::program_options;
+
+
+/**
+ * @param Configuration c, a tuple of all the position of the agents at the timestep t.
+ * @return The string of this tuple.
+ */
+std::string get_configuration_string(Configuration c) {
+  std::string result = "{";
+
+  for (AgentPosition p: c) {
+    result += "[" + std::to_string(p) + "],";
+  }
+
+  result += "}";
+
+  return result;
+}
+
+
+/**
+ * @param Execution exec contains multiple paths, one for each agent.
+ * @return The string of the execution.
+ */
+std::string get_execution_string(Execution exec) {
+  assert(exec.size() > 0);
+
+  std::vector<std::string> agent_paths;
+  int num_agents = exec.at(0).size();
+
+  for (int i = 0; i < num_agents; i++) {
+    agent_paths.push_back("[");
+  }
+
+  for (size_t j = 0; j < exec.size(); j++) {
+    auto config = exec[j];
+    for (int i = 0; i < num_agents; i++) {
+      agent_paths[i] = agent_paths[i] + std::to_string(config[i]) + ",";
+    }
+  }
+
+  std::string result = "{";
+  for (auto current_path: agent_paths) {
+    result = result + current_path + "],";
+  }
+  result = result + "}";
+
+  return result;
+}
+
+
+/**
+ * @param Execution exec contains multiple paths, one for each agent.
+ * @return The longest path contained inside the execution. 
+ * (this will be the bottleneck of an execution because all the path are performed in parallel)
+ */
+size_t get_longest_path_size(Execution exec) {
+  assert(exec.size() > 0);
+
+  int num_agents = exec.at(0).size();
+  size_t max_size = 0;
+
+  for (int i = 0; i < num_agents; i++) {
+    Path current_path;
+    for (int j = 0; j < exec.size(); j++) {
+      current_path.push_back(exec.at(j).at(i));
+    }
+
+    if (max_size < current_path.size()) {
+      max_size = current_path.size();
+    }
+  }
+
+  return max_size;
+}
+
+
+/**
+ * @param std::string alg_name name of the algorithm
+ * @return the corresponding id of the algorithm
+ */
+int get_subsolver_id(std::string alg_name) {
+  enum { CCA_STAR, RECURSION, NAIVE };
+
+  std::unordered_map<std::string, int> name_to_id = {
+    {"CODM", CCA_STAR},
+    {"CODM-BIDIR", CCA_STAR},
+    {"CODM-OPT", CCA_STAR},
+    {"ODRM", RECURSION},
+    {"ODM", NAIVE}
+  };
+
+  if (name_to_id.find(alg_name) == name_to_id.end()) {
+    return 0;
+  }
+
+  return name_to_id[alg_name];
+}
+
+
+/**
+ * @param std::string alg_name name of the algorithm
+ * @return the corresponding optimization id
+ */
+int get_optim_id(std::string alg_name) {
+  enum { NO_OPTIM, BIDIR, BIDIR_SCORE };
+  
+  std::unordered_map<std::string, int> name_to_id = {
+    {"CODM", NO_OPTIM},
+    {"CODM-BIDIR", BIDIR},
+    {"CODM-OPT", BIDIR_SCORE},
+    {"ODRM", NO_OPTIM},
+    {"ODM", NO_OPTIM}
+  };
+
+  if (name_to_id.find(alg_name) == name_to_id.end()) {
+    return 0;
+  }
+
+  return name_to_id[alg_name];
+}
+
+
+/**
+ * @param graph_folder
+ * @param experience
+ * @param optimization
+ */
+int main(int argc, const char *argv[]) {
+
+  try
+  {
+    options_description desc{"Options"};
+
+    desc.add_options()
+      ("help,h", "Help menu.")
+      ("graph_folder,g", value<std::string>(), "The path of the graph folder.")
+      ("experience,e", value<std::string>(), "The path of the experiment file.")
+      ("algorithm,a", value<std::string>(), "The algorithm chosen to solve the instance. Possibilities: CODM, CODM-OPT, ODRM, ODM.")
+      ("swapping_conflicts,s", value<bool>()->default_value(false), "Run algorithms with additional conflicts.")
+      ("verbose,v", value<bool>()->default_value(false), "Run algorithms with logs.");
+
+    variables_map vm;
+    store(parse_command_line(argc, argv, desc), vm);
+    notify(vm);
+
+    LOG_INFO("Initialize Connected Multi-agent Pathfinding Solver");
+
+    if (vm.count("help")) { 
+      std::cout << desc << '\n';
+      return 0;
+    }
+
+    std::string experience;
+    std::string graph_folder;
+    std::string algorithm_name;
+    int subsolver_id = 0;
+    int optim_type = 0;
+    bool swapping_conflicts = vm["swapping_conflicts"].as<bool>();
+    bool verbose = vm["verbose"].as<bool>();
+
+    if (!vm.count("graph_folder")){ 
+      LOG_WARNING("The graph folder path is missing !");
+      return 1;
+    } else {
+      graph_folder = vm["graph_folder"].as<std::string>();
+    }
+    
+    if (!vm.count("experience")) { 
+      LOG_WARNING("The experiment folder path is missing !");
+      return 1;
+    } else {
+      experience = vm["experience"].as<std::string>();
+    }
+
+    if (!vm.count("algorithm")) { 
+      LOG_WARNING("The algorithm name is missing !");
+      return 1;
+    } else {
+      algorithm_name = vm["algorithm"].as<std::string>();
+      subsolver_id = get_subsolver_id(algorithm_name);
+      optim_type = get_optim_id(algorithm_name);
+    }
+
+    LOG_INFO("The CMAPF instance will be generated by those files: ");
+    LOG_INFO("experience file: " << experience);
+    LOG_INFO("graph folder: " << graph_folder);
+
+    InstanceLoader instance;
+    instance.load_xml(experience, graph_folder);
+
+    LOG_INFO("Instance loaded!");
+
+    // data of the environment
+    MovesGraph movement_graph = instance.get_movement_graph();
+    CommunicationsGraph comm_graph = instance.get_comm_graph();
+    Moves movements_adj_list = instance.get_movement_graph().get_adj_list();
+
+    Configuration s = instance.get_start();
+    Configuration t = instance.get_goal();
+    assert(s.size() == t.size());
+
+    clock_t start_time = clock();
+
+    LOG_INFO("Number of agents: " << s.size());
+    LOG_INFO("Source configuration: " << get_configuration_string(s));
+    LOG_INFO("Target configuration: " << get_configuration_string(t));
+    LOG_INFO("Algorithm: " << algorithm_name);
+    LOG_INFO("Swapping conflicts activated: " << swapping_conflicts);
+
+    codm_star::ConnectedODMStar solver = codm_star::ConnectedODMStar(
+      std::make_shared<MovesGraph>(movement_graph), 
+      std::make_shared<CommunicationsGraph>(comm_graph),
+      subsolver_id,
+      optim_type,
+      verbose,
+      swapping_conflicts, 
+      10.0
+    );
+    Execution result;
+
+    if (algorithm_name == "CODM-OPT" || algorithm_name == "CODM-BIDIR") {
+      const size_t MAX_ITER = 500;
+      assert(s.size() < MAX_ITER);
+
+      result = solver.bidirectional_search(
+        s, t, 
+        std::make_optional<std::pair<uint64_t, double>>(MAX_ITER, 1.2), 
+        std::nullopt, 
+        algorithm_name == "CODM-OPT"
+      );
+
+    } else {
+      result = solver.search(s, t);
+    }
+
+    if (verbose) {
+      LOG_INFO(get_execution_string(result));
+    }
+
+    std::cout << "Time: " << ((double)(clock() - start_time) / CLOCKS_PER_SEC) << "s\n"
+              << "Longest path: " << get_longest_path_size(result) << "\n"
+              << "Execution found!\n" << std::flush; // if the algorithm finish, an execution is found.
+
+
+  } catch (const error &ex) {
+    std::cerr << ex.what() << '\n';
+  }
+
+  return 0;
+}

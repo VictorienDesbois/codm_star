@@ -1,0 +1,652 @@
+
+>>>>> offices_range1_agents15_5
+INFO: Experience: ../../generation/data/offices_range1_agents15_5.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 2249
+TRACE: Number of edges: 10267
+TRACE: Number of agents: 15
+INFO: Start configuration: <1145, 1146, 1144, 1147, 1148, 1092, 1201, 1204, 1090, 1036, 1089, 1203, 1202, 1091, 1035>
+INFO: Goal configuration: <2032, 2031, 2074, 2073, 2030, 2112, 2148, 2072, 2111, 2190, 2110, 2029, 1981, 2071, 1984>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721279012
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 141
+INFO: Execution cost:2115
+INFO: Execution found
+1.88user 0.01system 0:01.89elapsed 99%CPU (0avgtext+0avgdata 12528maxresident)k
+0inputs+1016outputs (0major+15700minor)pagefaults 0swaps
+
+>>>>> offices_range1_agents15_17
+INFO: Experience: ../../generation/data/offices_range1_agents15_17.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 2249
+TRACE: Number of edges: 10267
+TRACE: Number of agents: 15
+INFO: Start configuration: <989, 937, 938, 1036, 886, 1037, 887, 939, 885, 1092, 991, 1148, 1093, 1038, 1094>
+INFO: Goal configuration: <76, 115, 77, 38, 75, 74, 154, 73, 113, 152, 153, 191, 190, 230, 116>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721279014
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 69
+INFO: Execution cost:1035
+INFO: Execution found
+0.66user 0.00system 0:00.67elapsed 99%CPU (0avgtext+0avgdata 10828maxresident)k
+0inputs+1016outputs (0major+2197minor)pagefaults 0swaps
+
+>>>>> offices_range1_agents15_2
+INFO: Experience: ../../generation/data/offices_range1_agents15_2.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 2249
+TRACE: Number of edges: 10267
+TRACE: Number of agents: 15
+INFO: Start configuration: <1993, 1994, 2042, 2043, 2041, 1992, 2040, 2082, 2081, 1945, 2121, 2122, 2120, 2083, 2158>
+INFO: Goal configuration: <513, 512, 566, 514, 623, 622, 624, 567, 678, 729, 466, 730, 679, 568, 625>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721279014
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 108
+INFO: Execution cost:1620
+INFO: Execution found
+0.91user 0.01system 0:00.92elapsed 99%CPU (0avgtext+0avgdata 13512maxresident)k
+0inputs+1016outputs (0major+11579minor)pagefaults 0swaps
+
+>>>>> offices_range1_agents15_12
+INFO: Experience: ../../generation/data/offices_range1_agents15_12.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 2249
+TRACE: Number of edges: 10267
+TRACE: Number of agents: 15
+INFO: Start configuration: <1845, 1901, 1789, 1900, 1902, 1788, 1846, 1787, 1847, 1790, 1939, 1843, 1938, 1903, 1983>
+INFO: Goal configuration: <1567, 1568, 1566, 1534, 1533, 1500, 1499, 1601, 1467, 1602, 1532, 1635, 1599, 1569, 1498>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721279015
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 86
+INFO: Execution cost:1290
+INFO: Execution found
+0.89user 0.00system 0:00.90elapsed 99%CPU (0avgtext+0avgdata 10912maxresident)k
+0inputs+1024outputs (0major+2196minor)pagefaults 0swaps
+
+>>>>> offices_range1_agents15_1
+INFO: Experience: ../../generation/data/offices_range1_agents15_1.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 2249
+TRACE: Number of edges: 10267
+TRACE: Number of agents: 15
+INFO: Start configuration: <1103, 1102, 1104, 1046, 1045, 999, 947, 895, 896, 998, 845, 1048, 1047, 1160, 832>
+INFO: Goal configuration: <1432, 1458, 1397, 1457, 1431, 1493, 1430, 1396, 1360, 1433, 1398, 1459, 1526, 1460, 1559>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721279016
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 137
+INFO: Execution cost:2055
+INFO: Execution found
+1.67user 0.00system 0:01.67elapsed 100%CPU (0avgtext+0avgdata 10840maxresident)k
+0inputs+1016outputs (0major+2196minor)pagefaults 0swaps
+
+>>>>> offices_range1_agents15_19
+INFO: Experience: ../../generation/data/offices_range1_agents15_19.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 2249
+TRACE: Number of edges: 10267
+TRACE: Number of agents: 15
+INFO: Start configuration: <1657, 1624, 1591, 1656, 1625, 1590, 1557, 1556, 1623, 1622, 1686, 1523, 1555, 1716, 1658>
+INFO: Goal configuration: <762, 712, 659, 603, 802, 660, 713, 604, 803, 801, 711, 763, 714, 658, 602>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721279018
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 76
+INFO: Execution cost:1140
+INFO: Execution found
+0.74user 0.00system 0:00.74elapsed 99%CPU (0avgtext+0avgdata 11572maxresident)k
+0inputs+1016outputs (0major+5838minor)pagefaults 0swaps
+
+>>>>> offices_range1_agents15_8
+INFO: Experience: ../../generation/data/offices_range1_agents15_8.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 2249
+TRACE: Number of edges: 10267
+TRACE: Number of agents: 15
+INFO: Start configuration: <1378, 1377, 1376, 1375, 1342, 1339, 1343, 1344, 1380, 1379, 1308, 1415, 1416, 1303, 1307>
+INFO: Goal configuration: <269, 268, 291, 230, 267, 290, 266, 227, 188, 187, 292, 265, 264, 228, 341>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721279018
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[31mRun number 2
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 213
+INFO: Execution cost:3195
+INFO: Execution found
+4.20user 0.04system 0:04.25elapsed 99%CPU (0avgtext+0avgdata 16556maxresident)k
+8inputs+1024outputs (0major+42477minor)pagefaults 0swaps
+
+>>>>> offices_range1_agents15_9
+INFO: Experience: ../../generation/data/offices_range1_agents15_9.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 2249
+TRACE: Number of edges: 10267
+TRACE: Number of agents: 15
+INFO: Start configuration: <1620, 1619, 1621, 1586, 1588, 1654, 1652, 1589, 1618, 1590, 1684, 1553, 1623, 1552, 1683>
+INFO: Goal configuration: <1251, 1222, 1280, 1223, 1279, 1214, 1213, 1316, 1221, 1158, 1159, 1160, 1216, 1215, 1224>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721279023
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 49
+INFO: Execution cost:735
+INFO: Execution found
+0.54user 0.00system 0:00.56elapsed 99%CPU (0avgtext+0avgdata 10832maxresident)k
+8inputs+1016outputs (0major+2195minor)pagefaults 0swaps
+
+>>>>> offices_range1_agents15_0
+INFO: Experience: ../../generation/data/offices_range1_agents15_0.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 2249
+TRACE: Number of edges: 10267
+TRACE: Number of agents: 15
+INFO: Start configuration: <451, 452, 497, 551, 498, 550, 604, 549, 605, 548, 552, 606, 661, 602, 603>
+INFO: Goal configuration: <1556, 1557, 1558, 1525, 1526, 1523, 1490, 1455, 1559, 1591, 1454, 1489, 1488, 1491, 1524>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721279023
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 97
+INFO: Execution cost:1455
+INFO: Execution found
+1.13user 0.00system 0:01.14elapsed 99%CPU (0avgtext+0avgdata 12304maxresident)k
+0inputs+1016outputs (0major+15075minor)pagefaults 0swaps
+
+>>>>> offices_range1_agents15_15
+INFO: Experience: ../../generation/data/offices_range1_agents15_15.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 2249
+TRACE: Number of edges: 10267
+TRACE: Number of agents: 15
+INFO: Start configuration: <1007, 1006, 1008, 954, 1054, 902, 1053, 956, 1005, 953, 901, 850, 904, 852, 851>
+INFO: Goal configuration: <1665, 1632, 1666, 1633, 1696, 1664, 1631, 1697, 1663, 1667, 1726, 1693, 1662, 1629, 1599>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721279024
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 94
+INFO: Execution cost:1410
+INFO: Execution found
+1.49user 0.00system 0:01.50elapsed 99%CPU (0avgtext+0avgdata 11608maxresident)k
+8inputs+1016outputs (0major+5628minor)pagefaults 0swaps
+
+>>>>> offices_range1_agents15_14
+INFO: Experience: ../../generation/data/offices_range1_agents15_14.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 2249
+TRACE: Number of edges: 10267
+TRACE: Number of agents: 15
+INFO: Start configuration: <506, 460, 560, 559, 507, 459, 461, 458, 614, 558, 505, 508, 457, 613, 615>
+INFO: Goal configuration: <17, 16, 18, 19, 56, 15, 14, 20, 59, 54, 55, 95, 53, 93, 132>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721279026
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 95
+INFO: Execution cost:1425
+INFO: Execution found
+1.13user 0.00system 0:01.14elapsed 99%CPU (0avgtext+0avgdata 10744maxresident)k
+8inputs+1024outputs (0major+2195minor)pagefaults 0swaps
+
+>>>>> offices_range1_agents15_7
+INFO: Experience: ../../generation/data/offices_range1_agents15_7.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 2249
+TRACE: Number of edges: 10267
+TRACE: Number of agents: 15
+INFO: Start configuration: <724, 673, 674, 723, 725, 722, 773, 675, 618, 676, 772, 721, 720, 672, 727>
+INFO: Goal configuration: <2201, 2202, 2243, 2157, 2244, 2242, 2156, 2200, 2158, 2122, 2155, 2119, 2154, 2083, 2118>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721279027
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 112
+INFO: Execution cost:1680
+INFO: Execution found
+0.77user 0.01system 0:00.79elapsed 99%CPU (0avgtext+0avgdata 13772maxresident)k
+0inputs+1016outputs (0major+12853minor)pagefaults 0swaps
+
+>>>>> offices_range1_agents15_4
+INFO: Experience: ../../generation/data/offices_range1_agents15_4.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 2249
+TRACE: Number of edges: 10267
+TRACE: Number of agents: 15
+INFO: Start configuration: <183, 184, 144, 145, 105, 182, 66, 222, 185, 143, 181, 223, 106, 261, 65>
+INFO: Goal configuration: <1652, 1682, 1683, 1684, 1713, 1654, 1621, 1655, 1712, 1588, 1745, 1711, 1555, 1620, 1681>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721279028
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 133
+INFO: Execution cost:1995
+INFO: Execution found
+0.96user 0.01system 0:00.98elapsed 99%CPU (0avgtext+0avgdata 14588maxresident)k
+0inputs+1016outputs (0major+15930minor)pagefaults 0swaps
+
+>>>>> offices_range1_agents15_13
+INFO: Experience: ../../generation/data/offices_range1_agents15_13.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 2249
+TRACE: Number of edges: 10267
+TRACE: Number of agents: 15
+INFO: Start configuration: <2097, 2058, 2133, 2059, 2011, 2010, 2009, 2057, 1961, 2060, 1960, 2132, 1959, 1958, 1962>
+INFO: Goal configuration: <1202, 1203, 1146, 1090, 1204, 1148, 1092, 1091, 1201, 1149, 1205, 1089, 1035, 1036, 1147>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721279029
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[31mRun number 2
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 138
+INFO: Execution cost:2070
+INFO: Execution found
+3.13user 0.03system 0:03.16elapsed 99%CPU (0avgtext+0avgdata 15080maxresident)k
+0inputs+1024outputs (0major+33856minor)pagefaults 0swaps
+
+>>>>> offices_range1_agents15_16
+INFO: Experience: ../../generation/data/offices_range1_agents15_16.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 2249
+TRACE: Number of edges: 10267
+TRACE: Number of agents: 15
+INFO: Start configuration: <1722, 1749, 1723, 1692, 1662, 1721, 1691, 1690, 1689, 1661, 1693, 1769, 1719, 1770, 1694>
+INFO: Goal configuration: <1744, 1745, 1711, 1712, 1757, 1682, 1710, 1813, 1869, 1652, 1653, 1758, 1651, 1618, 1650>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721279032
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 58
+INFO: Execution cost:870
+INFO: Execution found
+0.50user 0.00system 0:00.51elapsed 100%CPU (0avgtext+0avgdata 10868maxresident)k
+0inputs+1024outputs (0major+2196minor)pagefaults 0swaps
+
+>>>>> offices_range1_agents15_10
+INFO: Experience: ../../generation/data/offices_range1_agents15_10.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 2249
+TRACE: Number of edges: 10267
+TRACE: Number of agents: 15
+INFO: Start configuration: <1720, 1690, 1691, 1747, 1746, 1767, 1766, 1823, 1765, 1660, 1879, 1721, 1689, 1768, 1880>
+INFO: Goal configuration: <144, 105, 143, 183, 222, 182, 142, 184, 145, 223, 181, 180, 219, 220, 224>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721279033
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 121
+INFO: Execution cost:1815
+INFO: Execution found
+0.74user 0.01system 0:00.75elapsed 100%CPU (0avgtext+0avgdata 15980maxresident)k
+0inputs+1016outputs (0major+21442minor)pagefaults 0swaps
+
+>>>>> offices_range1_agents15_6
+INFO: Experience: ../../generation/data/offices_range1_agents15_6.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 2249
+TRACE: Number of edges: 10267
+TRACE: Number of agents: 15
+INFO: Start configuration: <901, 953, 1005, 902, 1053, 903, 954, 1052, 1051, 1054, 1004, 850, 1050, 1006, 1003>
+INFO: Goal configuration: <1909, 1853, 1852, 1910, 1797, 1798, 1799, 1854, 1851, 1911, 1912, 1850, 1856, 1908, 1795>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721279033
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[31mRun number 2
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 150
+INFO: Execution cost:2250
+INFO: Execution found
+3.74user 0.02system 0:03.76elapsed 100%CPU (0avgtext+0avgdata 14484maxresident)k
+0inputs+1024outputs (0major+35733minor)pagefaults 0swaps
+
+>>>>> offices_range1_agents15_11
+INFO: Experience: ../../generation/data/offices_range1_agents15_11.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 2249
+TRACE: Number of edges: 10267
+TRACE: Number of agents: 15
+INFO: Start configuration: <1129, 1185, 1128, 1073, 1130, 1072, 1184, 1183, 1020, 1182, 1127, 1186, 1071, 1070, 1126>
+INFO: Goal configuration: <1762, 1761, 1818, 1874, 1819, 1763, 1875, 1760, 1820, 1817, 1821, 1873, 1822, 1765, 1926>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721279037
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[31mRun number 2
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 145
+INFO: Execution cost:2175
+INFO: Execution found
+3.41user 0.01system 0:03.43elapsed 99%CPU (0avgtext+0avgdata 12296maxresident)k
+0inputs+1040outputs (0major+13501minor)pagefaults 0swaps
+
+>>>>> offices_range1_agents15_18
+INFO: Experience: ../../generation/data/offices_range1_agents15_18.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 2249
+TRACE: Number of edges: 10267
+TRACE: Number of agents: 15
+INFO: Start configuration: <1247, 1248, 1277, 1218, 1313, 1219, 1211, 1314, 1210, 1349, 1278, 1155, 1220, 1209, 1249>
+INFO: Goal configuration: <311, 310, 312, 373, 313, 276, 374, 309, 314, 241, 375, 240, 277, 376, 202>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721279041
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[31mRun number 2
+ [0m[31mRun number 3
+ [0m[31mRun number 4
+ [0m[31mRun number 5
+ [0m[35m
+Shooked with CA*: 5 times
+[0m[35mGot prefix of size 10. Now running CA* from new source
+[0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 138
+INFO: Execution cost:2070
+INFO: Execution found
+10.63user 0.04system 0:10.67elapsed 99%CPU (0avgtext+0avgdata 13440maxresident)k
+24inputs+1048outputs (0major+73384minor)pagefaults 0swaps
+
+>>>>> offices_range1_agents15_3
+INFO: Experience: ../../generation/data/offices_range1_agents15_3.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 2249
+TRACE: Number of edges: 10267
+TRACE: Number of agents: 15
+INFO: Start configuration: <249, 210, 250, 251, 248, 280, 211, 321, 171, 252, 172, 209, 247, 320, 173>
+INFO: Goal configuration: <74, 73, 72, 35, 34, 36, 37, 71, 112, 32, 31, 111, 30, 33, 151>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721279051
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[31mRun number 2
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 124
+INFO: Execution cost:1860
+INFO: Execution found
+3.32user 0.00system 0:03.33elapsed 99%CPU (0avgtext+0avgdata 10948maxresident)k
+8inputs+1024outputs (0major+2196minor)pagefaults 0swaps

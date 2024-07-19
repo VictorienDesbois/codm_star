@@ -1,0 +1,4 @@
+phys_graph obstacles.png_phys_uniform_grid_1_range_3.graphml
+comm_graph obstacles.png_comm_uniform_grid_1_range_3.graphml
+start 7188 3680 1891 3786 7119 7292 7328 5544 1808 5470 
+goal 7681 6042 4207 4286 4168 6082 5816 7568 4210 4133 

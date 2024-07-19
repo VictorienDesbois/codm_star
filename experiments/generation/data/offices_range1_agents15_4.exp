@@ -1,0 +1,4 @@
+phys_graph offices.png_phys_uniform_grid_1_range_1.graphml
+comm_graph offices.png_comm_uniform_grid_1_range_1.graphml
+start 183 184 144 145 105 182 66 222 185 143 181 223 106 261 65 
+goal 1652 1682 1683 1684 1713 1654 1621 1655 1712 1588 1745 1711 1555 1620 1681 
