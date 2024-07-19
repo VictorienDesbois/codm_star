@@ -16,8 +16,10 @@ class ExperimentInputs:
 		# We made this choice because the first thread consume less memory than the second
 		# ODrM* and CODM* are more memory intensive than the rest.
 		self.algo_threads = [
-			self.__add_algo_with_swapping(["CODM-BIDIR", "CODM-OPT", "CCASTAR"]),
-			self.__add_algo_with_swapping(["ODRM", "CODM"]),
+			self.__add_algo_with_swapping(["CODM-BIDIR", "CODM-OPT"]),
+			self.__add_algo_with_swapping(["CODM"]),
+			self.__add_algo_with_swapping(["ODRM"]),
+			self.__add_algo_with_swapping(["CCASTAR"]),
 		]
 
 		# the map of the benchmark
@@ -29,8 +31,8 @@ class ExperimentInputs:
 		]
 
 		# limit of each solver per instance
-		self.time_limit = 180
-		self.memory_limit = 6000000
+		self.time_limit = 120
+		self.memory_limit = 4000000
 
 		# folders where to find experiments
 		self.graph_folder = "../../generation/graphs/"
@@ -40,8 +42,8 @@ class ExperimentInputs:
 		# of each experiments
 		self.exp_ids = [2, 5, 10, 15]
 		self.exp_ids = self.exp_ids + list(range(20, 90, 10))
-		# self.exp_ids = exp_ids + list(range(100, 325, 25))
-		# self.exp_ids = [2]
+		self.exp_ids = self.exp_ids + list(range(100, 325, 25))
+
 
 		self.algo_to_plot = ["CCASTAR", "ODRM", "CODM", "CODM-OPT"]
 		self.algo_to_plot_swapping = self.__add_algo_with_swapping(self.algo_to_plot)

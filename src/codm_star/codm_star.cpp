@@ -589,6 +589,14 @@ std::vector<ODconfig> ConnectedODMStar::compute_sub_solvers(std::shared_ptr<Node
   assert(n->od_config.is_standard());
   
   ODconfig successor = subsolver_successor(n);
+
+  if (subsolver_type_ == CCA_STAR && successor.OD_meta_agent.size() != 0) {
+    auto new_succ = get_next_config_from_subsolver(all_agents_.at(0), n->od_config.config);
+    if (new_succ.has_value()) {
+      return { new_succ.value() };
+    }
+  }
+
   return { successor };
 }
 
