@@ -7,7 +7,7 @@ This repository contains scripts and configurations to run experiments using dif
 Original experiments were conducted on Ubuntu 24.04 with 16 GB of RAM and an Intel i7 processor. To modify the experiment inputs, you can edit the script `exp_inputs.py`.
 
 > **Compile CA\***
-> The CA\* repository is avalaible at [CA* github](https://github.com/osankur/cmapf-solver), the project uses the CMake build system. To compile the version with swapping conflict, replace the `CAStar.hpp` file by the one in the folder `utils`. This new file add the function `is_position_a_swapping_conflict` and check if the new position generate a swapping conflict at line `277`.
+> The CA\* repository is available at [CA* GitHub](https://github.com/osankur/cmapf-solver). The project uses the CMake build system. To compile the version with swapping conflict detection, replace the `CAStar.hpp` file with the one in the `utils` folder. This new file adds the function `is_position_a_swapping_conflict` and checks if the new position generates a swapping conflict at line 277.
 
 ## Without Docker
 
