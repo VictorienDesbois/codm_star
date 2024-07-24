@@ -1,0 +1,642 @@
+
+>>>>> parallel_range4_agents5_0
+INFO: Experience: ../../generation/data/parallel_range4_agents5_0.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 1096
+TRACE: Number of edges: 4728
+TRACE: Number of agents: 5
+INFO: Start configuration: <913, 1007, 971, 1014, 1054>
+INFO: Goal configuration: <85, 170, 166, 271, 159>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721517764
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 71
+INFO: Execution cost:355
+INFO: Execution found
+0.34user 0.00system 0:00.34elapsed 99%CPU (0avgtext+0avgdata 12436maxresident)k
+0inputs+1016outputs (0major+2540minor)pagefaults 0swaps
+
+>>>>> parallel_range4_agents5_19
+INFO: Experience: ../../generation/data/parallel_range4_agents5_19.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 1096
+TRACE: Number of edges: 4728
+TRACE: Number of agents: 5
+INFO: Start configuration: <48, 99, 184, 219, 186>
+INFO: Goal configuration: <1048, 1045, 1086, 1080, 1081>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721517764
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 74
+INFO: Execution cost:370
+INFO: Execution found
+0.26user 0.00system 0:00.27elapsed 99%CPU (0avgtext+0avgdata 12480maxresident)k
+0inputs+1016outputs (0major+2538minor)pagefaults 0swaps
+
+>>>>> parallel_range4_agents5_15
+INFO: Experience: ../../generation/data/parallel_range4_agents5_15.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 1096
+TRACE: Number of edges: 4728
+TRACE: Number of agents: 5
+INFO: Start configuration: <791, 858, 946, 811, 756>
+INFO: Goal configuration: <339, 256, 386, 354, 260>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721517764
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 58
+INFO: Execution cost:290
+INFO: Execution found
+0.23user 0.00system 0:00.23elapsed 100%CPU (0avgtext+0avgdata 12452maxresident)k
+0inputs+1016outputs (0major+2540minor)pagefaults 0swaps
+
+>>>>> parallel_range4_agents5_1
+INFO: Experience: ../../generation/data/parallel_range4_agents5_1.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 1096
+TRACE: Number of edges: 4728
+TRACE: Number of agents: 5
+INFO: Start configuration: <855, 915, 881, 916, 943>
+INFO: Goal configuration: <155, 205, 268, 302, 332>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721517765
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 68
+INFO: Execution cost:340
+INFO: Execution found
+0.23user 0.00system 0:00.23elapsed 99%CPU (0avgtext+0avgdata 12480maxresident)k
+0inputs+1016outputs (0major+2539minor)pagefaults 0swaps
+
+>>>>> parallel_range4_agents5_5
+INFO: Experience: ../../generation/data/parallel_range4_agents5_5.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 1096
+TRACE: Number of edges: 4728
+TRACE: Number of agents: 5
+INFO: Start configuration: <131, 94, 130, 181, 279>
+INFO: Goal configuration: <542, 473, 393, 504, 578>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721517765
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 53
+INFO: Execution cost:265
+INFO: Execution found
+0.18user 0.00system 0:00.19elapsed 100%CPU (0avgtext+0avgdata 12480maxresident)k
+0inputs+1016outputs (0major+2540minor)pagefaults 0swaps
+
+>>>>> parallel_range4_agents5_18
+INFO: Experience: ../../generation/data/parallel_range4_agents5_18.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 1096
+TRACE: Number of edges: 4728
+TRACE: Number of agents: 5
+INFO: Start configuration: <272, 351, 273, 206, 207>
+INFO: Goal configuration: <557, 489, 622, 618, 555>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721517765
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 47
+INFO: Execution cost:235
+INFO: Execution found
+0.23user 0.00system 0:00.24elapsed 99%CPU (0avgtext+0avgdata 12480maxresident)k
+0inputs+1016outputs (0major+2540minor)pagefaults 0swaps
+
+>>>>> parallel_range4_agents5_13
+INFO: Experience: ../../generation/data/parallel_range4_agents5_13.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 1096
+TRACE: Number of edges: 4728
+TRACE: Number of agents: 5
+INFO: Start configuration: <1076, 1078, 1045, 991, 959>
+INFO: Goal configuration: <287, 220, 288, 136, 251>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721517765
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 104
+INFO: Execution cost:520
+INFO: Execution found
+0.30user 0.00system 0:00.30elapsed 99%CPU (0avgtext+0avgdata 12480maxresident)k
+8inputs+1016outputs (0major+2541minor)pagefaults 0swaps
+
+>>>>> parallel_range4_agents5_9
+INFO: Experience: ../../generation/data/parallel_range4_agents5_9.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 1096
+TRACE: Number of edges: 4728
+TRACE: Number of agents: 5
+INFO: Start configuration: <67, 66, 71, 28, 116>
+INFO: Goal configuration: <586, 595, 606, 649, 684>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721517766
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 62
+INFO: Execution cost:310
+INFO: Execution found
+0.19user 0.00system 0:00.19elapsed 100%CPU (0avgtext+0avgdata 12480maxresident)k
+0inputs+1024outputs (0major+2540minor)pagefaults 0swaps
+
+>>>>> parallel_range4_agents5_12
+INFO: Experience: ../../generation/data/parallel_range4_agents5_12.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 1096
+TRACE: Number of edges: 4728
+TRACE: Number of agents: 5
+INFO: Start configuration: <520, 451, 453, 517, 596>
+INFO: Goal configuration: <946, 891, 858, 863, 952>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721517766
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 31
+INFO: Execution cost:155
+INFO: Execution found
+0.16user 0.00system 0:00.17elapsed 98%CPU (0avgtext+0avgdata 12480maxresident)k
+8inputs+1016outputs (0major+2537minor)pagefaults 0swaps
+
+>>>>> parallel_range4_agents5_14
+INFO: Experience: ../../generation/data/parallel_range4_agents5_14.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 1096
+TRACE: Number of edges: 4728
+TRACE: Number of agents: 5
+INFO: Start configuration: <373, 408, 406, 405, 488>
+INFO: Goal configuration: <219, 185, 314, 376, 218>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721517766
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 87
+INFO: Execution cost:435
+INFO: Execution found
+0.27user 0.00system 0:00.28elapsed 99%CPU (0avgtext+0avgdata 12480maxresident)k
+0inputs+1016outputs (0major+2534minor)pagefaults 0swaps
+
+>>>>> parallel_range4_agents5_17
+INFO: Experience: ../../generation/data/parallel_range4_agents5_17.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 1096
+TRACE: Number of edges: 4728
+TRACE: Number of agents: 5
+INFO: Start configuration: <394, 474, 431, 574, 345>
+INFO: Goal configuration: <215, 216, 246, 312, 180>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721517766
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 31
+INFO: Execution cost:155
+INFO: Execution found
+0.14user 0.00system 0:00.15elapsed 99%CPU (0avgtext+0avgdata 12480maxresident)k
+0inputs+1016outputs (0major+2540minor)pagefaults 0swaps
+
+>>>>> parallel_range4_agents5_2
+INFO: Experience: ../../generation/data/parallel_range4_agents5_2.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 1096
+TRACE: Number of edges: 4728
+TRACE: Number of agents: 5
+INFO: Start configuration: <509, 588, 508, 431, 472>
+INFO: Goal configuration: <850, 784, 752, 908, 783>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721517767
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 49
+INFO: Execution cost:245
+INFO: Execution found
+0.20user 0.00system 0:00.20elapsed 98%CPU (0avgtext+0avgdata 12480maxresident)k
+8inputs+1024outputs (0major+2539minor)pagefaults 0swaps
+
+>>>>> parallel_range4_agents5_10
+INFO: Experience: ../../generation/data/parallel_range4_agents5_10.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 1096
+TRACE: Number of edges: 4728
+TRACE: Number of agents: 5
+INFO: Start configuration: <294, 298, 196, 148, 299>
+INFO: Goal configuration: <604, 617, 551, 583, 653>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721517767
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 51
+INFO: Execution cost:255
+INFO: Execution found
+0.24user 0.00system 0:00.24elapsed 99%CPU (0avgtext+0avgdata 12428maxresident)k
+0inputs+1016outputs (0major+2536minor)pagefaults 0swaps
+
+>>>>> parallel_range4_agents5_7
+INFO: Experience: ../../generation/data/parallel_range4_agents5_7.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 1096
+TRACE: Number of edges: 4728
+TRACE: Number of agents: 5
+INFO: Start configuration: <296, 265, 294, 355, 196>
+INFO: Goal configuration: <747, 777, 671, 705, 774>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721517767
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[31mRun number 2
+ [0m[31mRun number 3
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 58
+INFO: Execution cost:290
+INFO: Execution found
+2.34user 0.00system 0:02.35elapsed 99%CPU (0avgtext+0avgdata 12432maxresident)k
+8inputs+1024outputs (0major+2541minor)pagefaults 0swaps
+
+>>>>> parallel_range4_agents5_16
+INFO: Experience: ../../generation/data/parallel_range4_agents5_16.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 1096
+TRACE: Number of edges: 4728
+TRACE: Number of agents: 5
+INFO: Start configuration: <478, 363, 512, 360, 269>
+INFO: Goal configuration: <124, 75, 208, 174, 73>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721517769
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 48
+INFO: Execution cost:240
+INFO: Execution found
+0.18user 0.00system 0:00.18elapsed 99%CPU (0avgtext+0avgdata 12292maxresident)k
+0inputs+1016outputs (0major+2540minor)pagefaults 0swaps
+
+>>>>> parallel_range4_agents5_8
+INFO: Experience: ../../generation/data/parallel_range4_agents5_8.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 1096
+TRACE: Number of edges: 4728
+TRACE: Number of agents: 5
+INFO: Start configuration: <1074, 1040, 1039, 952, 951>
+INFO: Goal configuration: <451, 551, 515, 519, 605>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721517770
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 43
+INFO: Execution cost:215
+INFO: Execution found
+0.19user 0.00system 0:00.20elapsed 98%CPU (0avgtext+0avgdata 12480maxresident)k
+8inputs+1024outputs (0major+2541minor)pagefaults 0swaps
+
+>>>>> parallel_range4_agents5_11
+INFO: Experience: ../../generation/data/parallel_range4_agents5_11.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 1096
+TRACE: Number of edges: 4728
+TRACE: Number of agents: 5
+INFO: Start configuration: <972, 1060, 1061, 974, 1026>
+INFO: Goal configuration: <294, 263, 194, 147, 200>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721517770
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 96
+INFO: Execution cost:480
+INFO: Execution found
+0.26user 0.00system 0:00.27elapsed 98%CPU (0avgtext+0avgdata 12432maxresident)k
+8inputs+1016outputs (0major+2539minor)pagefaults 0swaps
+
+>>>>> parallel_range4_agents5_4
+INFO: Experience: ../../generation/data/parallel_range4_agents5_4.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 1096
+TRACE: Number of edges: 4728
+TRACE: Number of agents: 5
+INFO: Start configuration: <460, 379, 380, 564, 315>
+INFO: Goal configuration: <29, 28, 67, 33, 61>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721517770
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 41
+INFO: Execution cost:205
+INFO: Execution found
+0.17user 0.00system 0:00.17elapsed 98%CPU (0avgtext+0avgdata 12320maxresident)k
+8inputs+1016outputs (0major+2540minor)pagefaults 0swaps
+
+>>>>> parallel_range4_agents5_6
+INFO: Experience: ../../generation/data/parallel_range4_agents5_6.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 1096
+TRACE: Number of edges: 4728
+TRACE: Number of agents: 5
+INFO: Start configuration: <101, 99, 96, 93, 50>
+INFO: Goal configuration: <987, 1037, 896, 868, 1075>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721517770
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 95
+INFO: Execution cost:475
+INFO: Execution found
+0.31user 0.00system 0:00.32elapsed 100%CPU (0avgtext+0avgdata 12480maxresident)k
+0inputs+1016outputs (0major+2539minor)pagefaults 0swaps
+
+>>>>> parallel_range4_agents5_3
+INFO: Experience: ../../generation/data/parallel_range4_agents5_3.exp
+INFO: Graph Folder: ../../generation/graphs/
+INFO: Collisions:CHECK_COLLISIONS
+TRACE: Instance created!
+TRACE: Instance loaded!
+TRACE: Number of nodes: 1096
+TRACE: Number of edges: 4728
+TRACE: Number of agents: 5
+INFO: Start configuration: <691, 732, 652, 761, 758>
+INFO: Goal configuration: <6, 3, 10, 75, 89>
+INFO: Start and goal configurations are connected.
+INFO: Objective :SUM
+TRACE: Objective created!
+INFO: Heuristics:BIRDEYE
+INFO: Random seed: 1721517770
+INFO: Subsolver:CASTAR
+INFO: Window size:2
+INFO: Verbose: 0
+INFO: Algorithm:CASTAR
+INFO: Number of extension trials: 100
+INFO: Randomized shaking: 1
+TRACE: Solver created!
+[31mRun number 1
+ [0m[32mCA*-Shake solved the instance.
+[0mTRACE: Solver terminated!
+INFO: Longest path: 76
+INFO: Execution cost:380
+INFO: Execution found
+0.18user 0.00system 0:00.19elapsed 99%CPU (0avgtext+0avgdata 12480maxresident)k
+8inputs+1024outputs (0major+2539minor)pagefaults 0swaps
