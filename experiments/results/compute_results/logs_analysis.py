@@ -22,30 +22,41 @@ class LogAnalysis:
 		self.cost_plot_dict = {}
 		self.algo_list = algo_list
 
+		self.markers_list = ["v", "D", "x", "o", "1", "2"]
+		self.colors_list = ["c", "b", "r", "orange", "m", "g"]
+
 		for algo_name in algo_list:
 
+			existing_csvs = self.__gather_csv_file(f"{logs_folder}/{algo_name}_logs")
+
 			for log_file in self.__gather_log_file(f"{logs_folder}/{algo_name}_logs"):
-				csv_content = str()
-
-				if "CCASTAR" in algo_name:
-					csv_content = self.__parse_ca_star_logs(log_file)
-				else:
-					csv_content = self.__parse_rcmapf_solver_logs(log_file)
-
 				filename = log_file.replace(".txt", ".csv")
 
-				print(f"result written in {filename}")
+				if not (filename in existing_csvs): 
+					csv_content = str()
+					
+					if "CCASTAR" in algo_name:
+						csv_content = self.__parse_ca_star_logs(log_file)
+					else:
+						csv_content = self.__parse_rcmapf_solver_logs(log_file)
 
-				with open(filename, 'w') as file:
-					file.write(csv_content)
+					print(f"result written in {filename}")
+
+					with open(filename, 'w') as file:
+						file.write(csv_content)
 
 				# csv_df = pd.read_csv(io.StringIO(csv_content), delimiter=';')
 				csv_df = pd.read_csv(filename, delimiter=';')
 				df_len = len(csv_df)
 				nb_success = csv_df["success"].sum()
-				time_list = csv_df["time"].to_list()
-				cost_list = csv_df["longest_path"].to_list()
 				success_rate = nb_success / df_len
+
+				cost_list = []
+				time_list = []
+				for index, line in csv_df.iterrows():
+					if line["success"] == 1:
+						time_list.append(line["time"])
+						cost_list.append(line["longest_path"])
 
 				bench_name = csv_df["exp"][0]
 				pattern = r"^(.*?)_.*_agents(\d+)_"
@@ -65,8 +76,8 @@ class LogAnalysis:
 
 		plt.rcParams.update({'font.size': 14})
 		
-		markers_id = ["x", "o", "D", "v", "1", "2"]
-		colors_id = ["r", "y", "b", "c", "m", "g"]
+		markers_id = self.markers_list
+		colors_id = self.colors_list
 		alg_id_in_graph = 0
 
 		map_dict_result = self.__create_plot_dict(self.success_plot_dict, algo_to_show)
@@ -76,19 +87,34 @@ class LogAnalysis:
 		for map_id, (map_name, plot_list) in enumerate(map_dict_result.items()):
 			alg_id_in_graph = 0
 			plt.clf()
+
 			for (algo_name, plot_data) in plot_list:
 
 				if algo_name in algo_renaming:
 					algo_name = algo_renaming[algo_name]
 
-				plt.plot(
-					list(plot_data.keys()), 
-					list(plot_data.values()), 
-					color=colors_id[alg_id_in_graph], 
-					marker=markers_id[alg_id_in_graph], 
-					linestyle="solid", 
-					label=algo_name
-				)
+				sorted_plot_data = sorted(plot_data.items())
+				x, y = zip(*sorted_plot_data)
+
+				if alg_id_in_graph % 2 != 0:
+					plt.plot(
+						x, 
+						y, 
+						color=colors_id[alg_id_in_graph], 
+						markerfacecolor='None',
+						marker=markers_id[alg_id_in_graph], 
+						linestyle="solid", 
+						label=algo_name
+					)
+				else:
+					plt.plot(
+						x, 
+						y, 
+						color=colors_id[alg_id_in_graph], 
+						marker=markers_id[alg_id_in_graph], 
+						linestyle="solid", 
+						label=algo_name
+					)
 				
 				alg_id_in_graph = alg_id_in_graph + 1
 
@@ -98,7 +124,7 @@ class LogAnalysis:
 			picture_name = f"{map_name}_{label}_result"
 			plt.xlabel("Nb agents")
 			plt.ylabel(f"{label} rate")
-			plt.xlim((0, 5))
+			# plt.xlim((0, 300))
 			plt.ylim((0, 1.1))
 			plt.savefig(f"{output_folder}{picture_name}.pdf")
 			print(f"{label} plot of the map {map_name} at: {output_folder}{picture_name}.pdf")
@@ -116,7 +142,7 @@ class LogAnalysis:
 		
 		plt.rcParams.update({'font.size': 14})
 
-		colors_id = ["r", "y", "b", "c", "m", "g"]
+		colors_id = self.colors_list
 		alg_id_in_graph = 0
 
 		map_dict_result = self.__create_plot_dict(dict_plot, algo_to_show)
@@ -210,6 +236,17 @@ class LogAnalysis:
 	    return matching_files
 
 
+	def __gather_csv_file(self, folder_path):
+
+	    # Define the pattern to match files
+	    pattern = os.path.join(folder_path, f"*.csv")
+	    
+	    # Use glob to find all files matching the pattern
+	    matching_files = glob.glob(pattern)
+
+	    return matching_files
+
+
 	def __parse_ca_star_logs(self, logfile):
 		
 		# compile the results of CA* algorithm
@@ -218,12 +255,12 @@ class LogAnalysis:
 		with open(logfile,'r') as f:
 
 			bench = str()
-			time = 0
-			cost = 0
 
 			for line in f:
 				m = re.search('>>>>> (.*)', line)
 				if m:
+					time = 0
+					cost = 0
 					bench=m.group(1)
 			    
 				m = re.search('Longest path: ([0-9]+)', line)
@@ -245,17 +282,17 @@ class LogAnalysis:
 		result = "exp;success;longest_path;time\n"
 
 		with open(logfile,'r') as f:
-			bench = ""
-			time=0
-			memory=0
-			success=0
-			longest_path=0
+			bench = str()
 
 			for line in f:
 				# each new line start by >>>>>
 				m = re.search('>>>>> (.*)', line)
 				if m:
 					bench=m.group(1)
+					time=0
+					memory=0
+					success=0
+					longest_path=0
 
 				m = re.search('Execution found!', line)
 				if m:
@@ -288,10 +325,12 @@ def main():
 	 "CODM_SWAPPING": "CODM*",
 	 "CODM-BIDIR": "CODM*-bidir*",
 	 "CODM-BIDIR_SWAPPING": "CODM*-bidir*",
-	 "CODM-OPT": "CODM*-opt*",
-	 "CODM-OPT_SWAPPING": "CODM*-opt*",
+	 "CODM-OPT": "CODM*-opt",
+	 "CODM-OPT_SWAPPING": "CODM*-opt",
 	 "CCASTAR": "CA*",
 	 "CCASTAR_SWAPPING": "CA*",
+	 "ODRM": "ODrM*",
+	 "ODRM_SWAPPING": "ODrM*",
 	}
 
 	# classic plot pictures

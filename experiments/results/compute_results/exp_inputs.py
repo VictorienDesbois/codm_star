@@ -46,7 +46,10 @@ class ExperimentInputs:
 
 
 		self.algo_to_plot = ["CCASTAR", "ODRM", "CODM", "CODM-OPT"]
-		self.algo_to_plot_swapping = self.__add_algo_with_swapping(self.algo_to_plot)
+		self.algo_to_plot_swapping = []
+		for x in self.__add_algo_with_swapping(self.algo_to_plot):
+			if "_SWAPPING" in x:
+				self.algo_to_plot_swapping.append(x)
 
 		self.output_folder = "../plot_results/"
 		self.swapping_output_folder = "../swapping_plot_results/"
