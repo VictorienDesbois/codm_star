@@ -24,6 +24,7 @@ class LogAnalysis:
 
 		self.markers_list = ["o", "D", "x", "v", "1", "2"]
 		self.colors_list = ["b", "c", "r", "orange", "m", "g"]
+		self.linestyle_list = ["dashed", "dotted", "dashdot", "solid", "solid", "dashed"]
 
 		for algo_name in algo_list:
 
@@ -103,7 +104,7 @@ class LogAnalysis:
 						color=colors_id[alg_id_in_graph], 
 						markerfacecolor='None',
 						marker=markers_id[alg_id_in_graph], 
-						linestyle="solid", 
+						linestyle=self.linestyle_list[alg_id_in_graph], 
 						label=algo_name
 					)
 				else:
@@ -112,7 +113,7 @@ class LogAnalysis:
 						y, 
 						color=colors_id[alg_id_in_graph], 
 						marker=markers_id[alg_id_in_graph], 
-						linestyle="solid", 
+						linestyle=self.linestyle_list[alg_id_in_graph], 
 						label=algo_name
 					)
 				
@@ -121,7 +122,7 @@ class LogAnalysis:
 			if "office" in map_name:
 				plt.legend(loc="upper right")
 
-			picture_name = f"{map_name}_{label}_result"
+			picture_name = f"{map_name}_{label}".lower()
 			plt.xlabel("Nb agents")
 			plt.ylabel(f"{label} rate")
 			# plt.xlim((0, 300))
@@ -161,7 +162,7 @@ class LogAnalysis:
 					list(range(len(plot_data))), 
 					list(plot_data), 
 					color=colors_id[alg_id_in_graph], 
-					linestyle="solid", 
+					linestyle=self.linestyle_list[alg_id_in_graph], 
 					label=algo_name
 				)
 
@@ -170,7 +171,7 @@ class LogAnalysis:
 			if "office" in map_name:
 				plt.legend(loc="upper left")
 
-			picture_name = f"{map_name}_{label}_result"
+			picture_name = f"{map_name}_{label}".lower()
 			plt.xlabel("Instance")
 			plt.ylabel(f"{label}")
 			plt.savefig(f"{output_folder}{picture_name}.pdf")
