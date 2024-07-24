@@ -22,8 +22,8 @@ class LogAnalysis:
 		self.cost_plot_dict = {}
 		self.algo_list = algo_list
 
-		self.markers_list = ["v", "D", "x", "o", "1", "2"]
-		self.colors_list = ["c", "b", "r", "orange", "m", "g"]
+		self.markers_list = ["o", "D", "x", "v", "1", "2"]
+		self.colors_list = ["b", "c", "r", "orange", "m", "g"]
 
 		for algo_name in algo_list:
 
@@ -327,8 +327,8 @@ def main():
 	 "CODM-BIDIR_SWAPPING": "CODM*-bidir*",
 	 "CODM-OPT": "CODM*-opt",
 	 "CODM-OPT_SWAPPING": "CODM*-opt",
-	 "CCASTAR": "CA*",
-	 "CCASTAR_SWAPPING": "CA*",
+	 "CCASTAR": "WHCA*",
+	 "CCASTAR_SWAPPING": "WHCA*",
 	 "ODRM": "ODrM*",
 	 "ODRM_SWAPPING": "ODrM*",
 	}
