@@ -382,9 +382,14 @@ namespace codm_star {
       /////////////////////////
 
       /**
-       * @brief Give a score to each cell depending on the  
+       * @brief Assign scores to each cell based on its neighborhood.
+       * 
+       * This function evaluates each cell's score depending on the ease of movement for an agent
+       * at that cell's position. Cells that are more accessible or advantageous for movement
+       * will receive higher scores.
        */
       void preprocess_topological_graph();
+
 
       /**
        * @brief Give the score computed by the pre-processing step of the topological
@@ -401,22 +406,38 @@ namespace codm_star {
       /////////////////////////
 
       /**
-       * @brief 
+       * @brief Get the next optimal step after the given node.
+       * 
+       * @param n A shared pointer to the Node object.
+       * @return The optimal Configuration associated with the given node.
        */
       Configuration get_node_step(std::shared_ptr<Node> n);
-      
+         
+
       /**
-       * 
+       * @brief Get the next optimal step after `s` in the path from `s` to `t`.
+       *
+       * @param s The starting ODconfig object.
+       * @param t The target ODconfig object.
+       * @return The Configuration representing the step `s+1` in the path optimal from `s` to `t`.
        */
       Configuration get_step(ODconfig s, ODconfig t);
 
+
       /**
+       * @brief Initialize the backtrace path from a node.
        * 
+       * @param n A shared pointer to the Node object from which to start the backtrace.
+       * @return An Execution object representing the initialized backtrace path.
        */
       Execution back_trace_path_init(std::shared_ptr<Node> n);
 
+
       /**
+       * @brief Perform backtrace along a path from a node. For each best predecessor of the node `n` assign `n` as the forwards_ptr of `n->best_predecessor` (allow a computation shortcut for ODrM\*: if a node contains a non null forward_ptr, then we can reach the target node `t` from this node and the search can be stopped).
        * 
+       * @param n A shared pointer to the current Node object.
+       * @param s A shared pointer to the starting Node object for backtrace.
        */
       void back_trace_path(std::shared_ptr<Node> n, std::shared_ptr<Node> s);
   };

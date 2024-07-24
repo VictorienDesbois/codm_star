@@ -23,7 +23,7 @@ class LogAnalysis:
 		self.algo_list = algo_list
 
 		self.markers_list = ["o", "D", "x", "v", "1", "2"]
-		self.colors_list = ["b", "c", "r", "orange", "m", "g"]
+		self.colors_list = ["c", "b", "r", "orange", "m", "g"]
 		self.linestyle_list = ["dashed", "dotted", "dashdot", "solid", "solid", "dashed"]
 
 		for algo_name in algo_list:
