@@ -96,6 +96,5 @@ To reproduce the experiments presented in the paper, navigate to the `experiment
 
 - Victorien Desbois
 - Ocan Sankur
-- Arthur Queffelec
 
-Inspired by the ODrM\* implemenation of Guillaume Sartoretti and Justin Kerr for [PRIMAL](https://github.com/gsartoretti/PRIMAL).
+Inspired by the ODrM\* implemenation of Guillaume Sartoretti and Justin Kerr for [PRIMAL](https://github.com/gsartoretti/PRIMAL) and the CMAPF framework implementation by Arthur Queffelec for [cmapf-solver](https://github.com/osankur/cmapf-solver).
