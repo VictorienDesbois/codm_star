@@ -8,6 +8,9 @@ CCAstar::CCAstar() {
   check_swapping_conflicts_ = false; 
 }
 
+
+
+
 CCAstar::CCAstar(
   std::shared_ptr<MovesGraph> movement_graph,
   std::shared_ptr<CommunicationsGraph> comm_graph,
@@ -22,10 +25,10 @@ CCAstar::CCAstar(
   shuffle_type_ = MERGED;
 }
 
+
+
+
 CCAstar::~CCAstar() {}
-
-
-// methods
 
 
 
@@ -88,7 +91,7 @@ void CCAstar::standard_random_shuffle(std::vector<Agent> &agent_vector) {
 
 
 std::vector<Agent> CCAstar::shuffle_agents(uint nb_agents, Configuration s, Configuration t) {
-  // ordering by random shuffle
+  // Give a priority order to agents using random shuffle.
 
   std::vector<Agent> priority_order;
   std::vector<Agent> goal_agents;
@@ -136,7 +139,7 @@ std::unordered_set<AgentPosition> CCAstar::init_cluster(const Configuration &sta
   for (int a = 1; a < nb_agents; a++) {
     Agent a_to_switch = a;
 
-    // while the cluster doesn't contains the position of the current agent a
+    // While the cluster does not contain the position of the current agent `a`.
     while(cluster.count(start.at(shuffled.at(a_to_switch))) != 1 && a_to_switch < (nb_agents - 1)) {
       a_to_switch++;
     }
@@ -153,7 +156,7 @@ std::unordered_set<AgentPosition> CCAstar::init_cluster(const Configuration &sta
     }
   }
 
-  // Safety check for debugging
+  // Safety check.
   cluster = comm_graph_->get_neighbors_set(start.at(first_agent));
   for(Agent i = 1; i < nb_agents; i++){
     assert(cluster.count(start.at(shuffled[i])) == 1);
@@ -195,7 +198,8 @@ void CCAstar::extend_neighborhoods(
   int &path_size
 ) {
 
-  // If the added path is longer thant the previous ones, extend the neighbordhoods.
+  // If the added path is longer than the previous ones, extend the neighborhoods.
+  
   path_size = paths.back().size();
 
   for (int t = neighborhoods.size(); t < path_size; t++) {
@@ -221,7 +225,7 @@ void CCAstar::shorten_neighborhoods(
   int &path_size
 ) {
 
-  // If the added path is shorter then shorten all previous path and neighborhoods
+  // If the added path is shorter, shorten all previous paths and neighborhoods.
 
   path_size = paths.back().size();
   
@@ -241,19 +245,19 @@ void CCAstar::constrain_neighborhoods(
   Agent current_agent
 ) {
   
-  // Modify neighborhood for the next path computation
+  // Modify neighborhood for the next path computation.
   for (int t = 0; t < neighborhoods.size(); t++) {
-    // Add the neighborhood in communication to the new path
+    // Add the neighborhood in communication to the new path.
     int time_step = t < paths.back().size() ? t : (paths.back().size() - 1);
 
     for (auto pos: comm_graph_->get_neighbors_set(paths.back().at(time_step))) {
-      // add the neighboring connected positions of the current agent to the neighborhood
+      // Add the neighboring connected positions of the current agent to the neighborhood.
       neighborhoods.at(t).insert(pos);
     }
 
     for (Agent i = 0; i <= current_agent; i++){
       time_step = t < paths.at(i).size() ? t : (paths.at(i).size() - 1);
-      // erase the position occupied by the agent during the timestep i
+      // Erase the position occupied by the agent during timestep i.
       neighborhoods.at(t).erase(paths.at(i).at(time_step));
     }
   }
@@ -270,13 +274,13 @@ Execution CCAstar::compute_execution(
   uint nb_agents = start.size();
   max_path_size = -1;
 
-  // randomize agents order
+  // Randomize the agents' priority order.
   std::vector<Agent> shuffled = shuffle_agents(nb_agents, start, goal);
 
-  // init the neighborhood of the first agent
+  // Initialize the neighborhood of the first agent.
   std::unordered_set<AgentPosition> cluster = init_cluster(start, shuffled, nb_agents);
 
-  // compute the first path
+  // Compute the first path.
   std::vector<Path> paths;
   paths.push_back(get_shortest_path(shuffled.at(0), start.at(shuffled.at(0)), goal.at(shuffled.at(0))));
 
@@ -286,7 +290,7 @@ Execution CCAstar::compute_execution(
 
   int path_size = paths.back().size();
 
-  // Initialize neighborhoods: neighborhoods[t] is the set of unoccupied vertices that communicate with some vertex occupied by
+  // Initialize neighborhoods: neighborhoods[t] is the set of unoccupied positions that communicate with some positions occupied by
   // some agent at time t. Any subsequent agent must be and can be somewhere in neighboorhoods[t].
   std::vector<std::unordered_set<AgentPosition>> neighborhoods(paths.back().size());
   
@@ -294,11 +298,11 @@ Execution CCAstar::compute_execution(
     for (auto pos: comm_graph_->get_neighbors_set(paths.back().at(t))) {
       neighborhoods.at(t).insert(pos);
     }
-    // erase visited positions to avoid collisions
+    // Erase visited positions to avoid collisions.
     neighborhoods.at(t).erase(paths.back().at(t));
   }
 
-  // compute the path for each agent
+  // Compute the path for each agent.
   for (Agent a = 1; a < nb_agents; a++) {
     AgentPosition a_in_shuffled = shuffled.at(a);
     Path current_path = compute_path(
@@ -347,6 +351,7 @@ size_t CCAstar::get_heuristic(Agent a, AgentPosition s, AgentPosition t) {
 
   return heuristic_cost;
 }
+
 
 
 
@@ -463,7 +468,6 @@ Path CCAstar::compute_path(
 
   assert(neighborhoods.at(0).count(start) == 1);
   
-  // init
   Path path;
 
   const int num_of_nodes = movement_graph_->node_count(); 
@@ -476,7 +480,6 @@ Path CCAstar::compute_path(
   
   std::stack<AgentPosition> wait;
 
-  // init vectors
   for(int i = 0; i < num_of_nodes; i++) {
     suffix_next.push_back(std::numeric_limits<AgentPosition>::max());
     suffix_h.push_back(std::numeric_limits<size_t>::max());

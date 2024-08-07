@@ -8,7 +8,7 @@
 MovesGraph::MovesGraph() {}
 
 void MovesGraph::add_node(AgentPosition node_id, std::vector<float> position) {
-  // possibility for the agents to wait (stay on its position)
+  // Possibility for the agents to wait (stay in their position).
   boost::add_edge(node_id, node_id, 0.0, adj_list_);
 
 	positions_[node_id] = position;
@@ -16,19 +16,17 @@ void MovesGraph::add_node(AgentPosition node_id, std::vector<float> position) {
 }
 
 void MovesGraph::add_edge(AgentPosition s, AgentPosition t) {
-  // bidirectionnal
   add_edge(s, t, 1.0);
 }
 
 void MovesGraph::add_edge(AgentPosition s, AgentPosition t, float cost = 1.0) {
-  // bidirectionnal
   boost::add_edge(s, t, cost, adj_list_);
   boost::add_edge(t, s, cost, adj_list_);
 }
 
 
 
-//// Communication ////
+//// Communications ////
 
 CommunicationsGraph::CommunicationsGraph() {}
 
@@ -44,7 +42,8 @@ void CommunicationsGraph::add_edge(AgentPosition s, AgentPosition t) {
 }
 
 bool CommunicationsGraph::is_configuration_connected(Configuration config) {
-	// check if a configuration is connected or not
+	// Check if the configuration is connected or not.
+  
   assert(config.size() > 0);
   int nb_agents = config.size();
   std::set<AgentPosition> visited_agent;

@@ -68,7 +68,7 @@ void InstanceLoader::load_xml(const std::string& filepath, const std::string& gr
 
   const rapidxml::xml_node<>* move_graph_xml = move_doc.first_node("graphml")->first_node("graph");
 
-  // Creating the nodes
+  // Creating the nodes.
   for (const rapidxml::xml_node<>* node = move_graph_xml->first_node("node"); node != NULL; node = node->next_sibling()) {
     
     rapidxml::xml_attribute<>* attr = node->first_attribute("id");
@@ -94,7 +94,7 @@ void InstanceLoader::load_xml(const std::string& filepath, const std::string& gr
     comm_graph.add_node(node_id, position);
   }
 
-  // Loading the movement edges
+  // Load the movement edges.
   load_edge(move_graph_xml, Move);
 
   // xml comm graph
@@ -104,7 +104,7 @@ void InstanceLoader::load_xml(const std::string& filepath, const std::string& gr
 
   const rapidxml::xml_node<>* comm_graph_xml = com_doc.first_node("graphml")->first_node("graph");
 
-  // Loading the communication edges
+  // Load the communication edges.
   load_edge(comm_graph_xml, Comm);
 
   std::string startConf;
@@ -113,7 +113,7 @@ void InstanceLoader::load_xml(const std::string& filepath, const std::string& gr
   size_t startI = 0;
   auto endI = startConf.find(" ");
 
-  // Creating the start configuration
+  // Get the source configuration.
   while (endI != std::string::npos) {
     std::string s = startConf.substr(startI, endI - startI);
     
@@ -131,7 +131,7 @@ void InstanceLoader::load_xml(const std::string& filepath, const std::string& gr
   startI = 0;
   endI = goalConf.find(" ");
 
-  // Creating the goal configuration
+  // Get the target configuration.
   while (endI != std::string::npos) {
     std::string s = goalConf.substr(startI, endI - startI);
 

@@ -107,7 +107,7 @@ std::shared_ptr<Node> ConnectedODMStar::get_node(
     n->od_config.OD_ma_have_increased = n->od_config.OD_meta_agent != c.OD_meta_agent; 
 
     if (n->od_config.OD_ma_have_increased) {
-      // if changed, replace ODagts (ODagts is contained in ODconfig c)
+      // If changed, replace ODagts (ODagts is contained in ODconfig c)
       n->od_config = c;
     }
 
@@ -121,7 +121,7 @@ std::shared_ptr<Node> ConnectedODMStar::get_node(
   }
 
   if (recursive_call_) {
-    // reset the node if its a new planning iteration
+    // Reset the node if it's a new planning iteration
     n->reset(planning_iter_);
   }
 
@@ -217,11 +217,11 @@ Execution ConnectedODMStar::search(
 
   while (open_list.size() > 0) {
     
-    // get the current node
+    // Get the current node
     std::shared_ptr<Node> n = open_list.top();
     open_list.pop();
 
-    // check if the current node has been visited
+    // Check if the current node has been visited
     if (n->visited) {
       continue;
     }
@@ -237,35 +237,35 @@ Execution ConnectedODMStar::search(
       }
     }
 
-    // stop conditions
+    // Halting conditions
     if (n->od_config.config == t || 
         std::chrono::system_clock::now() > end ||
         nb_iterations > iterations_limit) {
       return get_execution(n);
     }
 
-    // collection of the new meta agents formed by the conflicts in potential successors
+    // Collection of the new meta-agents formed by the conflicts in potential successors.
     MetaAgents new_meta_agents;
 
-    // mark the current node has visited
+    // Mark the current node as visited.
     n->visited = true;
 
-    // get all the potential successors of n
+    // Get all the potential successors of n.
     std::vector<ODconfig> successors = get_successors(n);
     size_t open_size_before_it = open_list.size();
 
-    // conflict priority
+    // "Type of conflict" initialization
     current_conflict_ = NO_CONFLICT;
 
-    // search iteration: compute the next successors
+    // Search iteration: compute the next successors
     for(ODconfig successor: successors) {
       visit_successor(successor, n, new_meta_agents, open_list, ma_manager, co_manager);
     }
 
-    // back propagate conflict information to merge new meta-agents
+    // Backpropagate conflict information to merge new meta-agents
     back_propagation(n, new_meta_agents, open_list);
 
-    // manage the case where subsolver does not find a successor
+    // Manage the case where the subsolver does not find a successor
     no_successor(open_size_before_it, n, open_list);
 
     if (activate_logs_) {
@@ -294,7 +294,7 @@ void ConnectedODMStar::visit_successor(
   ConnectivityManager &co_manager
 ) {
 
-  // compute collisions conflicts
+  // Compute collision conflicts
   MetaAgents meta_agents_set = od_collisions(n->od_config, s);
   bool successor_has_collisions = meta_agents_set.size() > 0; 
   bool successor_is_disconnected = s.is_standard() && !comm_graph_->is_configuration_connected(s.config) && !recursive_call_;
@@ -315,10 +315,10 @@ void ConnectedODMStar::visit_successor(
 
   } else { 
 
-    // else if no conflict is detected, get the successor node
+    // Else if no conflict is detected, get the successor of n
     std::shared_ptr<Node> successor = get_node(s);
 
-    // update the node data
+    // Update the node data
     successor->predecessors.insert(n);
     MetaAgents prev_maset_successor = successor->meta_agents;
     ma_manager.meta_agents_set_union(prev_maset_successor, new_meta_agents);
@@ -326,10 +326,10 @@ void ConnectedODMStar::visit_successor(
     if (!successor->visited) {
       double successor_cost = n->cost + get_edge_cost(n->od_config, s);
 
-      // update the cost of the successor of n
+      // Update the cost of the successor of n
       if (successor_cost < successor->cost) {
 
-        // update the successor meta-agents with the predecessor meta-agents
+        // Update the successor meta-agents with the predecessor meta-agents
         if (successor->od_config.is_standard()) {
           ma_manager.meta_agents_set_union(n->meta_agents, successor->meta_agents);
         }
@@ -386,12 +386,15 @@ void ConnectedODMStar::no_successor(
   OpenList &open
 ) {
 
-  // get a successor where the OD meta-agent is all agents
+  // If no valid successor is added to Open,
+  // run back_propagation_ma_od to ensure the invariant
+  // that n has potential predecessors inside Open.
   if (open_size_before_it == open.size()) {
     back_propagation_ma_od(n);
   }
 
-  // insert the "side successors" inside the open list
+  // If Open is empty, insert the "side successors"
+  // into Open.  
   if (open.size() == 0) {
     for (auto& it: explored_) {
       if (it.second->side_successor) {
@@ -448,7 +451,7 @@ void ConnectedODMStar::back_propagation_ma_od(std::shared_ptr<Node> n) {
     MetaAgent full_OD_meta_agent; 
     auto assigned_moves = current_node->od_config.assigned_moves;
 
-    // create the following set: full_OD_meta_agent := Agt \ dom(c')
+    // create the following collection: full_OD_meta_agent := Agt \ dom(c')
     for (Agent a = 0; a < nb_agents_; a++) {
       if (assigned_moves.find(a) == assigned_moves.end()) {
         full_OD_meta_agent.insert(a);
@@ -461,16 +464,16 @@ void ConnectedODMStar::back_propagation_ma_od(std::shared_ptr<Node> n) {
 
     if (current_node->od_config.OD_meta_agent != full_OD_meta_agent) {
 
-      // the node does not respect n.ODagts = Agt \ dom(c')
+      // The node does not respect n.ODagts = Agt \ dom(c')
       current_node->od_config.OD_meta_agent = full_OD_meta_agent;
     
-      // side_successor flag means that the node is re-openable
+      // The `side_successor` flag indicates that the node is re-openable.
       current_node->side_successor = true; 
     
     } else {
 
       for (std::shared_ptr<Node> p: current_node->predecessors) {
-        // the only nodes that can possess empty ODagts are the standard nodes. Only visit them.
+        // The only nodes that can have empty ODagts are the standard nodes. Only visit those nodes.
         std::optional<std::shared_ptr<Node>> standard_pred = get_standard_node(p->od_config);
         if (standard_pred.has_value() && visited_nodes.find(standard_pred.value()) == visited_nodes.end()) 
           predecessors_queue.push(standard_pred.value());
@@ -550,19 +553,19 @@ std::vector<ODconfig> ConnectedODMStar::od_successors(ODconfig c) {
     successor.OD_ma_have_increased = false;
     successor.generated_by_subsolver = false;
 
-    // assigne new position for this agent
+    // Assign the new position to this agent.
     successor.assigned_moves[a] = current_pos;
     successor.last_agent_assigned = a;
     successor_is_valid = true;
 
     if (successor.is_OD_finished()) {
 
-      // if all moves have been assigned: assign the moves in the config
+      // If all moves have been assigned, update the moves in the config.
       for (auto it = successor.assigned_moves.begin(); it != successor.assigned_moves.end(); it++) {
         successor.config.at(it->first) = it->second;
       }
       
-      // clear the data related to OD
+      // Clear the data related to OD.
       successor.assigned_moves.clear();
       successor.OD_meta_agent.clear();
       successor_is_valid = successor.config != c.config;
@@ -609,41 +612,45 @@ ODconfig ConnectedODMStar::subsolver_successor(std::shared_ptr<Node> n) {
   successor.generated_by_subsolver = true;
   MetaAgent new_OD_agents;
 
-  // assign the individual optimal moves to singleton meta-agents
+  // Assign the individual optimal moves to singleton meta-agents.
   for (Agent a = 0; a < nb_agents_; a++) {
     AgentPosition current_position = n->od_config.config.at(a);
     successor.assigned_moves[a] = policies_.at(agents_.at(a))->get_step(current_position); 
   }
 
-  // assign subplanners moves to meta-agents
+  // Assign subplanners' moves to meta-agents.
   for (MetaAgent ma: n->meta_agents) {
 
-    // get current configuration
+    // Get current configuration.
     Configuration ma_configuration;
     for (Agent a: ma) {
       ma_configuration.push_back(n->od_config.config.at(a));
     }
 
-    // call subsolver
+    // Call subsolver.
     std::optional<Configuration> ma_successor = get_next_config_from_subsolver(ma, ma_configuration);
 
-    if (ma_successor.has_value()) { // subsolver success
+    if (ma_successor.has_value()) { 
+      // Subsolver success
       int i = 0;
       for (Agent a: ma) {
         successor.assigned_moves[a] = ma_successor.value().at(i);
         i++;
       }
-    } else { // subsolver fails
+    
+    } else {                       
+      // Subsolver fails
       new_OD_agents.insert(ma.begin(), ma.end());
     }
   }
 
-  // remove the assigned moves from subsolvers that have failed
+  // Remove the assigned moves from subsolvers that have failed.
   for (const Agent a: new_OD_agents) {
     successor.assigned_moves.erase(a);
   }
 
-  // some subplanners have failed
+  // If some subsolvers have failed, 
+  // update the `OD_meta_agent` of the successor.
   successor.OD_meta_agent = new_OD_agents;
   successor.assign_moves();
 
@@ -674,15 +681,14 @@ std::optional<Configuration> ConnectedODMStar::get_next_config_from_subsolver(
       break;
 
     case RECURSION:
-      // get the successor configuration from a recursive call to ODrM*
+      // Get the successor configuration from a recursive call to ODrM*.
       for (Agent a: ma) {
-
-        // Recursive CODM* possess local agent ids.
-        // We need to convert those id into the original agent ids
+        // Recursive CODM* uses local agent IDs.
+        // We need to convert these IDs into the original agent IDs
         // from the original CODM* call. This line is necessary for that:
         original_ma.push_back(agents_.at(a));
         
-        // get the target configuration from policies:
+        // Get the target configuration from policies:
         t.push_back(policies_.at(agents_.at(a))->get_goal());
       }
       
@@ -710,7 +716,7 @@ std::optional<Configuration> ConnectedODMStar::get_next_config_from_subsolver(
 
 ODconfig ConnectedODMStar::get_random_successor(std::shared_ptr<Node> n) {
 
-  // neighbors expansion is incomplete so this node will be potentially re-opened
+  // Successor expansion is incomplete, so this node may be potentially re-opened.
   n->side_successor = true;
 
   ODconfig successor = n->od_config;
@@ -722,7 +728,6 @@ ODconfig ConnectedODMStar::get_random_successor(std::shared_ptr<Node> n) {
     ma_configuration.push_back(n->od_config.config.at(a));
   }
 
-  // test with the OD meta-agent 
   Configuration ma_successor = subplanners_.get_successor(ma, ma_configuration, true);
   bool success = ma_successor.size() > 0;
 
@@ -776,9 +781,8 @@ bool ConnectedODMStar::check_config_validity(
   bool valid_move = false;
 
   for (AgentPosition a = 0; a < nb_agents_; a++) {
-    // check if the current position is contained in the
-    // neighborhood of the precedent position.
-
+    // Check if the current position is contained in the
+    // neighborhood of the previous position.
     AgentPosition pred_pos = pred_c.at(a);
     AgentPosition current_pos = c.at(a);
 
@@ -884,7 +888,7 @@ Execution ConnectedODMStar::bidirectional_search(
   bool activate_score
 ) {
   
-  // compute the degree of liberty of each position
+  // Compute the degree of liberty for each position.
   preprocess_topological_graph(); 
 
   Execution exec_forward = {s};
@@ -913,7 +917,7 @@ Execution ConnectedODMStar::bidirectional_search(
 
   while(!is_goal_reached) {
 
-    Configuration source = exec_forward.back(); // optimize the source and target selection
+    Configuration source = exec_forward.back();
     Configuration target = exec_backward.back(); 
 
     if (activate_logs_) {
@@ -926,14 +930,14 @@ Execution ConnectedODMStar::bidirectional_search(
 
     current_exec = {};
     
-    // alternate between forward and backward
+    // Alternation between forward and backward search.
     if (is_forward) {
       current_exec = search(source, target, iterations_limit, time_limit);
     } else {
       current_exec = search(target, source, iterations_limit, time_limit);
     }
 
-    // add the current Execution to the global ones
+    // Add the current local execution to the global ones.
     if (current_exec.size() > 1) {
       if (is_forward) {
         exec_forward.insert(exec_forward.end(), current_exec.begin() + 1, current_exec.end());
@@ -942,7 +946,6 @@ Execution ConnectedODMStar::bidirectional_search(
       }
     }
 
-    // check the state of the search
     is_goal_reached = (exec_forward.back() == exec_backward.back());
 
     if (activate_score) {
@@ -955,7 +958,7 @@ Execution ConnectedODMStar::bidirectional_search(
 
     is_forward = !is_forward;  
 
-    // update limits
+    // Update the time and the number of iteration limits.
     iterations_limit = iterations_limit * iterations_pair.second;
     time_limit = time_limit * time_pair.second;
   }

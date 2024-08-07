@@ -13,8 +13,8 @@ using namespace boost::program_options;
 
 
 /**
- * @param Configuration c, a tuple of all the position of the agents at the timestep t.
- * @return The string of this tuple.
+ * @param c A configuration, which is a tuple of all the positions of the agents at timestep t.
+ * @return The string representation of this tuple.
  */
 std::string get_configuration_string(Configuration c) {
   std::string result = "{";
@@ -30,8 +30,8 @@ std::string get_configuration_string(Configuration c) {
 
 
 /**
- * @param Execution exec contains multiple paths, one for each agent.
- * @return The string of the execution.
+ * @param exec An execution containing multiple paths, one for each agent.
+ * @return The string representation of the execution.
  */
 std::string get_execution_string(Execution exec) {
   assert(exec.size() > 0);
@@ -61,9 +61,9 @@ std::string get_execution_string(Execution exec) {
 
 
 /**
- * @param Execution exec contains multiple paths, one for each agent.
- * @return The longest path contained inside the execution. 
- * (this will be the bottleneck of an execution because all the path are performed in parallel)
+ * @param exec An execution containing multiple paths, one for each agent.
+ * @return The longest path contained within the execution.
+ * (This will be the bottleneck of the execution because all paths are performed in parallel.)
  */
 size_t get_longest_path_size(Execution exec) {
   assert(exec.size() > 0);
@@ -87,8 +87,8 @@ size_t get_longest_path_size(Execution exec) {
 
 
 /**
- * @param std::string alg_name name of the algorithm
- * @return the corresponding id of the algorithm
+ * @param alg_name The name of the algorithm.
+ * @return The corresponding ID of the algorithm.
  */
 int get_subsolver_id(std::string alg_name) {
   enum { CCA_STAR, RECURSION, NAIVE };
@@ -110,8 +110,8 @@ int get_subsolver_id(std::string alg_name) {
 
 
 /**
- * @param std::string alg_name name of the algorithm
- * @return the corresponding optimization id
+ * @param alg_name The name of the algorithm.
+ * @return The corresponding optimization ID.
  */
 int get_optim_id(std::string alg_name) {
   enum { NO_OPTIM, BIDIR, BIDIR_SCORE };
@@ -132,13 +132,13 @@ int get_optim_id(std::string alg_name) {
 }
 
 
-/**
- * @param graph_folder
- * @param experience
- * @param optimization
- */
-int main(int argc, const char *argv[]) {
 
+int main(int argc, const char *argv[]) {
+  /**
+   * graph The folder path for the graph.
+   * experiment The path for the experiment.
+   * optimization The type of optimization.
+   */
   try
   {
     options_description desc{"Options"};
@@ -202,7 +202,6 @@ int main(int argc, const char *argv[]) {
 
     LOG_INFO("Instance loaded!");
 
-    // data of the environment
     MovesGraph movement_graph = instance.get_movement_graph();
     CommunicationsGraph comm_graph = instance.get_comm_graph();
     Moves movements_adj_list = instance.get_movement_graph().get_adj_list();
@@ -251,8 +250,7 @@ int main(int argc, const char *argv[]) {
 
     std::cout << "Time: " << ((double)(clock() - start_time) / CLOCKS_PER_SEC) << "s\n"
               << "Longest path: " << get_longest_path_size(result) << "\n"
-              << "Execution found!\n" << std::flush; // if the algorithm finish, an execution is found.
-
+              << "Execution found!\n" << std::flush; // If the algorithm finishes, an execution is found.
 
   } catch (const error &ex) {
     std::cerr << ex.what() << '\n';

@@ -112,7 +112,7 @@ Execution SubplannersManager::compute_cca_star(
     }
   }
 
-  // fail: the subsolver does not solve the instance
+  // Fail: the subsolver does not solve the instance.
   return {}; 
 }
 
@@ -135,16 +135,16 @@ Configuration SubplannersManager::get_successor(MetaAgent ma, Configuration c, b
 
   uint64_t nb_retry = ma.size();
 
-  // if the configuration is not stored, then compute the execution associated with it
+  // If the configuration is not stored, compute the execution associated with it.
   if (!configuration_explored(ma, c) || rand) {
 
     int opt = (!rand) ? CLASSIC : RANDOM;
 
-    // run the subsolver
+    // Run the subsolver.
     Execution ma_execution = compute_cca_star(current_source, current_target, ma, nb_retry, opt);
     subsolver_call++;
 
-    // check if the subsolver return a valid execution 
+    // Check if the subsolver returns a valid execution. 
     if (is_execution_valid(ma_execution)) {
 
       if (executions_storage_.find(ma) == executions_storage_.end()) {
@@ -156,11 +156,11 @@ Configuration SubplannersManager::get_successor(MetaAgent ma, Configuration c, b
         Configuration current = ma_execution.at(i);
         if (i < ma_execution.size() - 1) {     
           Configuration current_successor = ma_execution.at(i+1);
-          // if the execution is valid, store each configuration inside the map
-          // that link meta-agent to the current execution
+          // If the execution is valid, store each configuration in the map
+          // that links the meta-agent to the current execution.
           executions_storage_[ma][current] = current_successor;
         } else {
-          // manage the case of CA* execution of size one
+          // Manage the case where the CA* execution size is one.
           executions_storage_[ma][current] = current;
         }
       }
@@ -198,7 +198,7 @@ bool SubplannersManager::is_configuration_valid(size_t nb_agents, Configuration 
 
   CollisionsManager coll_manager;
 
-  // check if the configuration does not contains collision
+  // Check if the configuration does not contain collisions.
   bool not_colliding = true;
 
   if (check_swapping_conflicts_) {
@@ -207,7 +207,7 @@ bool SubplannersManager::is_configuration_valid(size_t nb_agents, Configuration 
     not_colliding = (coll_manager.get_coupled_agent(pred_c, c).size() == 0);
   }
 
-  // check if the move is possible
+  // Check if the move is possible.
   bool valid_move = true;
 
   for (Agent a = 0; a < nb_agents; a++) {
@@ -240,12 +240,11 @@ bool SubplannersManager::is_execution_valid(Execution e) {
   bool valid_exec = true;
   Configuration pred_c;
   
-  // init
   pred_c = e.front();
   const int nb_agents = pred_c.size(); 
 
   for (Configuration c: e) {
-    // check collision
+    // Check collisions.
     std::vector<bool> non_assigned(nb_agents, false);
 
     valid_exec = valid_exec && is_configuration_valid(nb_agents, pred_c, c);
