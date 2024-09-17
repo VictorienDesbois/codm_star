@@ -89,7 +89,7 @@ namespace cca_star {
        * @param ma The MetaAgent representing the set of agents for which the path will be computed.
        * @return The computed Execution.
        */
-      Execution search(Configuration s, Configuration t, MetaAgent ma);
+      Execution search(Configuration &s, Configuration &t, MetaAgent &ma);
 
 
       /**
@@ -153,7 +153,7 @@ namespace cca_star {
        * @param t The target Configuration.
        * @return A vector of shuffled agents.
        */
-      std::vector<Agent> shuffle_agents(uint nb_agents, Configuration s, Configuration t);
+      std::vector<Agent> shuffle_agents(uint nb_agents, const Configuration &s, const Configuration &t);
 
 
       /**

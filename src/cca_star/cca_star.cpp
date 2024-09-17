@@ -48,7 +48,7 @@ void CCAstar::set_shuffle_type(int shuffle_type) {
 
 
 
-Execution CCAstar::search(Configuration s, Configuration t, MetaAgent ma) {
+Execution CCAstar::search(Configuration &s, Configuration &t, MetaAgent &ma) {
   assert(comm_graph_->is_configuration_connected(s));
   
   for (Agent a: ma) {
@@ -90,7 +90,7 @@ void CCAstar::standard_random_shuffle(std::vector<Agent> &agent_vector) {
 
 
 
-std::vector<Agent> CCAstar::shuffle_agents(uint nb_agents, Configuration s, Configuration t) {
+std::vector<Agent> CCAstar::shuffle_agents(uint nb_agents, const Configuration &s, const Configuration &t) {
   // Give a priority order to agents using random shuffle.
 
   std::vector<Agent> priority_order;

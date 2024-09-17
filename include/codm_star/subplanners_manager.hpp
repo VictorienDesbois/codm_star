@@ -35,7 +35,7 @@ namespace codm_star {
       SubplannersManager(
         std::shared_ptr<MovesGraph> movement_graph,
         std::shared_ptr<CommunicationsGraph> comm_graph,
-        std::vector<std::shared_ptr<ShortestPaths>> policies,
+        std::vector<std::shared_ptr<ShortestPaths>> &policies,
         bool activate_logs = false,
         bool check_swapping_conflicts = false
       );
@@ -49,7 +49,7 @@ namespace codm_star {
        * @param rand A boolean flag indicating whether to return a random successor (default is false).
        * @return A valid successor of a Configuration.
        */
-      Configuration get_successor(MetaAgent ma, Configuration c, bool rand = false);
+      Configuration get_successor(MetaAgent &ma, Configuration &c, bool rand = false);
 
 
       /**
@@ -104,7 +104,7 @@ namespace codm_star {
        * @param c The Configuration to check for.
        * @return True if the configuration has been explored, false otherwise.
        */
-      bool configuration_explored(MetaAgent ma, Configuration c);
+      bool configuration_explored(MetaAgent &ma, Configuration &c);
 
 
       /**
@@ -119,7 +119,7 @@ namespace codm_star {
        * @param c The Configuration to validate.
        * @return True if the configuration is valid, false otherwise.
        */
-      bool is_configuration_valid(size_t nb_agents, Configuration pred_c, Configuration c);
+      bool is_configuration_valid(size_t nb_agents, Configuration &pred_c, Configuration &c);
 
 
       /**
@@ -128,7 +128,7 @@ namespace codm_star {
        * @param e The Execution to validate.
        * @return True if the execution is conflict-free, false otherwise.
        */
-      bool is_execution_valid(Execution e);
+      bool is_execution_valid(Execution &e);
 
 
       /**
@@ -146,9 +146,9 @@ namespace codm_star {
        * @return The computed Execution.
        */
       Execution compute_cca_star(
-        Configuration s, 
-        Configuration t,
-        MetaAgent ma,
+        Configuration &s, 
+        Configuration &t,
+        MetaAgent &ma,
         uint64_t nb_retry, 
         uint64_t opt);
 

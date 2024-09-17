@@ -62,7 +62,7 @@ ConnectedODMStar::ConnectedODMStar(
 
 
 
-void ConnectedODMStar::preprocess_agents_individual_paths(ODconfig t) {
+void ConnectedODMStar::preprocess_agents_individual_paths(ODconfig &t) {
 
   if (!recursive_call_) {
     explored_ = {};
@@ -95,7 +95,7 @@ void ConnectedODMStar::preprocess_agents_individual_paths(ODconfig t) {
 
 
 std::shared_ptr<Node> ConnectedODMStar::get_node(
-  ODconfig c
+  ODconfig &c
 ) {
   auto iterator = explored_.find(c);
   std::shared_ptr<Node> n;
@@ -131,7 +131,7 @@ std::shared_ptr<Node> ConnectedODMStar::get_node(
 
 
 
-double ConnectedODMStar::get_heuristic(ODconfig c) {
+double ConnectedODMStar::get_heuristic(ODconfig &c) {
   double h = 0;
 
   for (Agent a = 0; a < nb_agents_; a++) {
@@ -148,7 +148,7 @@ double ConnectedODMStar::get_heuristic(ODconfig c) {
 
 
 
-double ConnectedODMStar::get_edge_cost(ODconfig s, ODconfig t) {
+double ConnectedODMStar::get_edge_cost(ODconfig &s, ODconfig &t) {
   double cost = 0;
   
   if (s.is_standard() && t.is_standard()) {
@@ -186,8 +186,8 @@ double ConnectedODMStar::get_edge_cost(ODconfig s, ODconfig t) {
 
 
 Execution ConnectedODMStar::search(
-  Configuration s, 
-  Configuration t,
+  Configuration &s, 
+  Configuration &t,
   uint64_t iterations_limit,
   uint32_t time_limit
 ) {
@@ -286,7 +286,7 @@ Execution ConnectedODMStar::search(
 
 
 void ConnectedODMStar::visit_successor(
-  ODconfig s,
+  ODconfig &s,
   std::shared_ptr<Node> n,
   MetaAgents &new_meta_agents, 
   OpenList &open_list,
@@ -419,7 +419,7 @@ void ConnectedODMStar::no_successor(
 
 
 std::optional<std::shared_ptr<Node>> ConnectedODMStar::get_standard_node(
-  ODconfig c
+  ODconfig &c
 ) {
   c = ODconfig(c.config);
   auto iterator = explored_.find(c);
@@ -536,7 +536,7 @@ std::vector<ODconfig> ConnectedODMStar::compute_od(std::shared_ptr<Node> n) {
 
 
 
-std::vector<ODconfig> ConnectedODMStar::od_successors(ODconfig c) {
+std::vector<ODconfig> ConnectedODMStar::od_successors(ODconfig &c) {
   std::vector<ODconfig> successors;
   Agent a = c.next_agent_to_compute();
   AgentPosition p = c.config.at(a);
@@ -662,7 +662,7 @@ ODconfig ConnectedODMStar::subsolver_successor(std::shared_ptr<Node> n) {
 
 std::optional<Configuration> ConnectedODMStar::get_next_config_from_subsolver(
   MetaAgent ma, 
-  Configuration c
+  Configuration &c
 ) {
   assert(c.size() > 0);
 
@@ -671,6 +671,9 @@ std::optional<Configuration> ConnectedODMStar::get_next_config_from_subsolver(
   std::vector<Agent> original_ma;
   std::shared_ptr<ConnectedODMStar> recursive_call;
   Configuration result;
+
+  ODconfig od_c = ODconfig(c);
+  ODconfig od_t = ODconfig(t);
 
   switch(subsolver_type_) {
 
@@ -698,7 +701,7 @@ std::optional<Configuration> ConnectedODMStar::get_next_config_from_subsolver(
       }
 
       recursive_call = recursive_subplanners_->at(original_ma);
-      result = recursive_call->get_step(ODconfig(c), ODconfig(t));
+      result = recursive_call->get_step(od_c, od_t);
       
       return result;
       break;
@@ -775,7 +778,7 @@ MetaAgents ConnectedODMStar::od_collisions(ODconfig &s, ODconfig &t) {
 
 
 bool ConnectedODMStar::check_config_validity(
-  Configuration pred_c, Configuration c
+  Configuration &pred_c, Configuration &c
 ) {
 
   bool valid_move = false;
@@ -866,7 +869,7 @@ void ConnectedODMStar::preprocess_topological_graph() {
 
 
 uint64_t ConnectedODMStar::get_configuration_score(
-  Configuration c
+  Configuration &c
 ) {
   uint64_t score = 0;
 
@@ -881,8 +884,8 @@ uint64_t ConnectedODMStar::get_configuration_score(
 
 
 Execution ConnectedODMStar::bidirectional_search(
-  Configuration s, 
-  Configuration t,
+  Configuration &s, 
+  Configuration &t,
   std::optional<std::pair<uint64_t, double>> iterations_parameters,
   std::optional<std::pair<uint32_t, double>> time_parameters,
   bool activate_score
@@ -997,7 +1000,7 @@ Configuration ConnectedODMStar::get_node_step(std::shared_ptr<Node> n) {
 
 
 
-Configuration ConnectedODMStar::get_step(ODconfig s, ODconfig t) {
+Configuration ConnectedODMStar::get_step(ODconfig &s, ODconfig &t) {
   
   std::shared_ptr<Node> n = get_node(s);
   if (n->forwards_ptr != nullptr){

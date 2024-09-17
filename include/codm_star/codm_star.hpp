@@ -82,8 +82,8 @@ namespace codm_star {
        * @return An Execution object containing the result of the search.
        */
       Execution search(
-        Configuration s, 
-        Configuration t,
+        Configuration &s, 
+        Configuration &t,
         uint64_t iterations_limit = std::numeric_limits<uint64_t>::max(),
         uint32_t time_limit = std::numeric_limits<uint32_t>::max());
 
@@ -92,8 +92,8 @@ namespace codm_star {
        * 
        */
       Execution bidirectional_search(
-        Configuration s, 
-        Configuration t,
+        Configuration &s, 
+        Configuration &t,
         std::optional<std::pair<uint64_t, double>> iterations_parameters,
         std::optional<std::pair<uint32_t, double>> time_parameters,
         bool activate_score = true);
@@ -181,7 +181,7 @@ namespace codm_star {
        * @param c A configuration.
        * @return A shared pointer to a Node object.
        */
-      std::shared_ptr<Node> get_node(ODconfig c);
+      std::shared_ptr<Node> get_node(ODconfig &c);
 
       
       /**
@@ -189,7 +189,7 @@ namespace codm_star {
        * 
        * @param t The target configuration.
        */
-      void preprocess_agents_individual_paths(ODconfig t);
+      void preprocess_agents_individual_paths(ODconfig &t);
 
 
       /**
@@ -198,7 +198,7 @@ namespace codm_star {
        * @param c A configuration.
        * @return The heuristic value as a double.
        */
-      double get_heuristic(ODconfig c);
+      double get_heuristic(ODconfig &c);
 
 
       /**
@@ -208,7 +208,7 @@ namespace codm_star {
        * @param t The target ODconfig object.
        * @return The edge cost as a double.
        */
-      double get_edge_cost(ODconfig s, ODconfig t);
+      double get_edge_cost(ODconfig &s, ODconfig &t);
 
 
       /**
@@ -224,7 +224,7 @@ namespace codm_star {
        * @param co_manager The ConnectivityManager object needed to check connectivity properties about the node.
        */
       void visit_successor(
-        ODconfig s,
+        ODconfig &s,
         std::shared_ptr<Node> n,
         MetaAgents &new_meta_agents, 
         OpenList &open_list,
@@ -267,7 +267,7 @@ namespace codm_star {
        * @return the standard ancestor of a node.
       */
       std::optional<std::shared_ptr<Node>> get_standard_node(
-        ODconfig c);
+        ODconfig &c);
 
 
       /**
@@ -297,7 +297,7 @@ namespace codm_star {
        * @param n The current node.
        * @return The successors of n considering the agent a.
        */
-      std::vector<ODconfig> od_successors(ODconfig c);
+      std::vector<ODconfig> od_successors(ODconfig &c);
 
 
       /**
@@ -327,7 +327,7 @@ namespace codm_star {
        */
       std::optional<Configuration> get_next_config_from_subsolver(
         MetaAgent ma, 
-        Configuration c);
+        Configuration &c);
 
 
       /**
@@ -366,7 +366,7 @@ namespace codm_star {
        * @param c The current Configuration to be checked.
        * @return true if the configurations are valid (no conflicts), false otherwise.
        */
-       bool check_config_validity(Configuration pred_c, Configuration c);
+       bool check_config_validity(Configuration &pred_c, Configuration &c);
 
 
       /**
@@ -399,7 +399,7 @@ namespace codm_star {
        * @return the score of the configuration.
        */
       uint64_t get_configuration_score(
-        Configuration c
+        Configuration &c
       );
 
       // ODrM* optimizations //
@@ -421,7 +421,7 @@ namespace codm_star {
        * @param t The target ODconfig object.
        * @return The Configuration representing the step `s+1` in the path optimal from `s` to `t`.
        */
-      Configuration get_step(ODconfig s, ODconfig t);
+      Configuration get_step(ODconfig &s, ODconfig &t);
 
 
       /**

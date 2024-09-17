@@ -8,7 +8,7 @@ using namespace codm_star;
 SubplannersManager::SubplannersManager(
   std::shared_ptr<MovesGraph> movement_graph,
   std::shared_ptr<CommunicationsGraph> comm_graph,
-  std::vector<std::shared_ptr<ShortestPaths>> policies,
+  std::vector<std::shared_ptr<ShortestPaths>> &policies,
   bool activate_logs,
   bool check_swapping_conflicts
 ) {
@@ -65,9 +65,9 @@ Configuration SubplannersManager::get_random_config(size_t nb_agents) {
 
 
 Execution SubplannersManager::compute_cca_star(
-  Configuration s, 
-  Configuration t,
-  MetaAgent ma,
+  Configuration &s, 
+  Configuration &t,
+  MetaAgent &ma,
   uint64_t nb_retry, 
   uint64_t opt) 
 {
@@ -119,7 +119,7 @@ Execution SubplannersManager::compute_cca_star(
 
 
 
-Configuration SubplannersManager::get_successor(MetaAgent ma, Configuration c, bool rand) {
+Configuration SubplannersManager::get_successor(MetaAgent &ma, Configuration &c, bool rand) {
   assert(c.size() > 0);
   assert(c.size() == ma.size());
 
@@ -194,7 +194,7 @@ Configuration SubplannersManager::get_successor(MetaAgent ma, Configuration c, b
 
 
 
-bool SubplannersManager::is_configuration_valid(size_t nb_agents, Configuration pred_c, Configuration c) {
+bool SubplannersManager::is_configuration_valid(size_t nb_agents, Configuration &pred_c, Configuration &c) {
 
   CollisionsManager coll_manager;
 
@@ -233,7 +233,7 @@ bool SubplannersManager::is_configuration_valid(size_t nb_agents, Configuration 
 
 
 
-bool SubplannersManager::is_execution_valid(Execution e) {
+bool SubplannersManager::is_execution_valid(Execution &e) {
 
   if (e.size() <= 0) { return false; }
 
@@ -259,7 +259,7 @@ bool SubplannersManager::is_execution_valid(Execution e) {
 
 
 
-bool SubplannersManager::configuration_explored(MetaAgent ma, Configuration c) {
+bool SubplannersManager::configuration_explored(MetaAgent &ma, Configuration &c) {
   auto storage_it = executions_storage_.find(ma);
   Configuration ma_target;
 
