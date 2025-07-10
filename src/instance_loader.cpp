@@ -29,6 +29,9 @@ void InstanceLoader::load_edge(const rapidxml::xml_node<>* graph, GraphType grap
     switch(graph_type) {
       case Move: moves_graph.add_edge(s, t, 1.0); break;
       case Comm: comm_graph.add_edge(s, t); break;
+      default:
+        LOG_ERROR("Unknown case in \"edge addition\" switch (code = " << graph_type << ")");
+        std::abort();
     }
   }
 } 

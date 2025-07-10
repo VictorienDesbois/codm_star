@@ -122,7 +122,10 @@ std::vector<Agent> CCAstar::shuffle_agents(uint nb_agents, const Configuration &
       
       deterministic_random_shuffle(priority_order);   
       break;
-  
+
+    default:
+      LOG_ERROR("Unknown case in \"shuffle type\" switch (code = " << shuffle_type_ << ")");
+      std::abort();  
   }
 
   return priority_order;
@@ -183,6 +186,10 @@ Path CCAstar::get_shortest_path(Agent a, AgentPosition s, AgentPosition t) {
     case BIRDEYE:
       result = ShortestPaths(movement_graph_->get_adj_list(), a, t).get_shortest_path(s); 
       break;
+
+    default:
+      LOG_ERROR("Unknown case in \"shortest path\" switch (code = " << heuristic_type_ << ")");
+      std::abort();
 
   } 
 
@@ -346,7 +353,10 @@ size_t CCAstar::get_heuristic(Agent a, AgentPosition s, AgentPosition t) {
     case BIRDEYE:
       heuristic_cost = comm_graph_->euclidean_distance(s, t);
       break;
-  
+
+    default:
+      LOG_ERROR("Unknown case in \"heuristic type\" switch (code = " << heuristic_type_ << ")");
+      std::abort();
   }
 
   return heuristic_cost;

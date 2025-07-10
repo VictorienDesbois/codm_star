@@ -1,6 +1,7 @@
 #define LOG_DEBUG(s) std::cerr << "DEBUG: " << s << "\n"
 #define LOG_INFO(s) std::cerr << "INFO: " << s << "\n"
 #define LOG_WARNING(s) std::cerr << "WARNING: " << s << "\n"
+#define LOG_ERROR(s) std::cerr << "ERROR: " << s << "\n"
 
 #ifndef CMAPF_TYPES
 #define CMAPF_TYPES

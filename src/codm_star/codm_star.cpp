@@ -709,6 +709,10 @@ std::optional<Configuration> ConnectedODMStar::get_next_config_from_subsolver(
     case NAIVE:
       return std::nullopt;
       break;
+
+    default:
+      LOG_ERROR("Unknown case in \"subsolver type\" switch (code = " << subsolver_type_ << ")");
+      std::abort();
   }
 
   return std::nullopt;

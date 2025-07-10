@@ -210,6 +210,8 @@ int main(int argc, const char *argv[]) {
     Configuration t = instance.get_goal();
     assert(s.size() == t.size());
 
+    const float suboptimal_inflation_factor = 10.0f; 
+
     clock_t start_time = clock();
 
     LOG_INFO("Number of agents: " << s.size());
@@ -225,19 +227,24 @@ int main(int argc, const char *argv[]) {
       optim_type,
       verbose,
       swapping_conflicts, 
-      10.0
+      suboptimal_inflation_factor
     );
     Execution result;
 
     if (algorithm_name == "CODM-OPT" || algorithm_name == "CODM-BIDIR") {
       const size_t MAX_ITER = 500;
+      const float iter_factor = 1.2;
+      std::optional<std::pair<uint64_t, double>> iterations_parameters = std::make_optional<std::pair<uint64_t, double>>(MAX_ITER, iter_factor);
+      std::optional<std::pair<uint32_t, double>> time_parameters = std::nullopt;
+      const bool score_option_activation = (algorithm_name == "CODM-OPT");
+
       assert(s.size() < MAX_ITER);
 
       result = solver.bidirectional_search(
         s, t, 
-        std::make_optional<std::pair<uint64_t, double>>(MAX_ITER, 1.2), 
-        std::nullopt, 
-        algorithm_name == "CODM-OPT"
+        iterations_parameters, 
+        time_parameters, 
+        score_option_activation
       );
 
     } else {

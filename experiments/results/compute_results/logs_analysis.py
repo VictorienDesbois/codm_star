@@ -75,7 +75,7 @@ class LogAnalysis:
 
 	def make_success_plot_picture(self, algo_to_show, algo_renaming, output_folder):
 
-		plt.rcParams.update({'font.size': 14})
+		plt.rcParams.update({'font.size': 18})
 		
 		markers_id = self.markers_list
 		colors_id = self.colors_list
@@ -105,7 +105,9 @@ class LogAnalysis:
 						markerfacecolor='None',
 						marker=markers_id[alg_id_in_graph], 
 						linestyle=self.linestyle_list[alg_id_in_graph], 
-						label=algo_name
+						label=algo_name,
+						linewidth=4,
+						markersize=10
 					)
 				else:
 					plt.plot(
@@ -114,7 +116,9 @@ class LogAnalysis:
 						color=colors_id[alg_id_in_graph], 
 						marker=markers_id[alg_id_in_graph], 
 						linestyle=self.linestyle_list[alg_id_in_graph], 
-						label=algo_name
+						label=algo_name,
+						linewidth=4,
+						markersize=10
 					)
 				
 				alg_id_in_graph = alg_id_in_graph + 1
@@ -122,8 +126,10 @@ class LogAnalysis:
 			if "office" in map_name:
 				plt.legend(loc="upper right")
 
+			plt.subplots_adjust(left=0.15,bottom=0.15)
+			# plt.gca().set_aspect(aspect=1.0)
 			picture_name = f"{map_name}_{label}".lower()
-			plt.xlabel("Nb agents")
+			plt.xlabel("Number of agents")
 			plt.ylabel(f"{label} rate")
 			# plt.xlim((0, 300))
 			plt.ylim((0, 1.1))
